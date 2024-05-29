@@ -119,7 +119,6 @@ export default function Nav() {
           <p className="text-[26px] font-semibold">for industrial</p>
         </div>
       </div>
-      {currentSidebarHover}
       {/* sidebar */}
       <div className="fixed top-[150px] w-[178px] h-[333px]  overflow-visible z-[10]  right-0  flex-col items-end hidden lg:flex">
         <div
