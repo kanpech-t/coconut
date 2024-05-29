@@ -77,7 +77,7 @@ export default function Nav() {
   }
 
   return (
-    <div className="relative ">
+    <div className="relative h-[100dvh] overflow-y-auto">
       {/* nav bar */}
       <div className="w-full h-[128px] flex items-center justify-between py-9 px-[24px] lg:px-[72px]  fixed top-0 z-[100] bg-[#475131] bg-opacity-10 border-b border-white lg:border-none">
         <Logo
@@ -102,7 +102,7 @@ export default function Nav() {
       </div>
       {/* cover img */}
       <div className="h-[100dvh] overflow-hidden relative z-[15] flex flex-col justify-center lg:justify-start">
-        <Slide arrows={false}>
+        <Slide arrows={false} swipe={false}>
           {slideImages.map((image, index) => (
             <div key={index} className="each-slide">
               <img
