@@ -76,7 +76,7 @@ export default function Nav() {
     mobileNav.current.classList.add('animate-fadeRight')
     setTimeout(() => {
       setDisplayMobileNav(false)
-    }, 300)
+    }, 250)
   }
 
   const scrollToItem = (item) => {
@@ -161,9 +161,13 @@ export default function Nav() {
           ))}
         </Slide>
         <div className="self-center justify-self-center absolute w-[465px] h-[176px] text-center lg:bottom-[205px] lg:left-[135px] z-[100] text-[#F0F4E4]">
-          <p className="text-[40px] sacramento-regular "> Taste of nature</p>
-          <p className="text-[64px] font-bold">Coconut Milk</p>
-          <p className="text-[26px] font-semibold">for industrial</p>
+          <p className="text-[24px] lg:text-[40px] sacramento-regular ">
+            Taste of nature
+          </p>
+          <p className="text-[36px] lg:text-[64px] font-bold">Coconut Milk</p>
+          <p className="text-[20px] lg:text-[26px] font-semibold">
+            for industrial
+          </p>
         </div>
       </div>
       {/* sidebar */}
@@ -253,11 +257,11 @@ export default function Nav() {
           {/* img */}
           <div className="min-w-[440px] h-[674px] rounded-2xl bg-slate-400 hidden lg:block"></div>
           <div className="px-6 py-[10px] flex flex-col">
-            <h1 className="text-primary-green text-[36px] font-bold mb-9">
+            <h1 className="text-primary-green text-[28px] lg:text-[36px] font-semibold lg:font-bold mb-9">
               Our Product
             </h1>
             <div className="  h-[674px] rounded-2xl bg-slate-400 block lg:hidden mb-[44px]"></div>
-            <p className="text-[18px] font-medium mb-[24px] text-[#1C2014]">
+            <p className="text-[16px] lg:text-[18px] font-medium mb-[24px] text-[#1C2014]">
               Our key products consist of authentic aromatic young coconuts,
               cultivated in the lush western region of Thailand— an area
               well-known for its ideal coconut growing environment.
@@ -289,7 +293,7 @@ export default function Nav() {
             our service
           </span>
           <div className="flex mt-4 lg:gap-[64px] lg:flex-row flex-col">
-            <div className="text-[36px] font-bold lg:max-w-[calc(33%-32px)]">
+            <div className="lg:text-[36px] text-[28px] font-semibold lg:font-bold lg:max-w-[calc(33%-32px)]">
               We provide global shipping services,
             </div>
             <img
@@ -312,11 +316,11 @@ export default function Nav() {
           Company Background
         </span>
         <div className="flex flex-col items-center">
-          <div className="text-[36px] font-bold text-primary-green lg:w-[60%] text-center mb-[48px] lg:mb-[56px]">
+          <div className="lg:text-[36px] text-[28px] font-semibold lg:font-bold text-primary-green lg:w-[60%] text-center mb-[48px] lg:mb-[56px]">
             “ Siriphon Thai Fruit company is a leading exporter of fresh
             coconuts and Thai fruits worldwide. ”
           </div>
-          <span className="lg:w-[60%]">
+          <span className="lg:w-[60%] text-[16px] text-[#1C2014] lg:text-[18px] ">
             {backgroundContent[currentBackGroundPage]}
           </span>
           <div className="mt-[40px] flex gap-4 lg:self-center self-end">
@@ -340,14 +344,16 @@ export default function Nav() {
         </div>
       </div>
       <div className="py-[56px] px-[24px] lg:py-[96px] lg:px-[135px] bg-primary-green text-center">
-        <h2 className="font-semibold text-[28px] text-white">
+        <h2 className="font-semibold text-[20px] lg:text-[28px] text-white">
           We have a commitment to delivering
         </h2>
         <div className="flex-col flex lg:flex-row  gap-16 mt-16 lg:h-[134px] items-center justify-center">
           <div className="flex gap-8 items-center text-start">
             <Varietires />
             <div>
-              <h2 className="font-bold text-[36px] text-white">Varieties</h2>
+              <h2 className="font-semibold text-[28px] lg:font-bold lg:text-[36px] text-white">
+                Varieties
+              </h2>
               <span className="text-[20px] font-semibold text-white">
                 Aromatic young coconuts
               </span>
@@ -356,7 +362,9 @@ export default function Nav() {
           <div className="flex gap-8 items-center text-start">
             <Quality />
             <div>
-              <h2 className="font-bold text-[36px] text-white">Quality</h2>
+              <h2 className="font-semibold text-[28px] lg:font-bold  text-white">
+                Quality
+              </h2>
               <span className="text-[20px] font-semibold text-white">
                 No pest, 100% organic
               </span>
