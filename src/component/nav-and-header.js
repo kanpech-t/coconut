@@ -12,15 +12,21 @@ import { ReactComponent as Youtube } from '../svg/youtube.svg'
 import { ReactComponent as Phone } from '../svg/phone.svg'
 import { ReactComponent as Cart } from '../svg/cart.svg'
 import { ReactComponent as Catalog } from '../svg/Catalog.svg'
+import { ReactComponent as Close } from '../svg/close.svg'
 
 import { Slide } from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
 import '../index.css'
 
 export default function Nav() {
+  // ====================== useState ======================
   const [currentBackGroundPage, setCurrentBackGroundPage] = useState(0)
 
   const [currentSidebarHover, setCurrentSidebarHover] = useState('')
+
+  const [displayMobileNav, setDisplayMobileNav] = useState(false)
+
+  const mobileNav = useRef(null)
 
   const aboutUs = useRef(null)
 
@@ -66,6 +72,13 @@ export default function Nav() {
     }
   }
 
+  const handleCloseMobile = () => {
+    mobileNav.current.classList.add('animate-fadeRight')
+    setTimeout(() => {
+      setDisplayMobileNav(false)
+    }, 300)
+  }
+
   const scrollToItem = (item) => {
     switch (item) {
       case 'About us':
@@ -77,9 +90,34 @@ export default function Nav() {
   }
 
   return (
-    <div className="relative h-[100dvh] overflow-y-auto">
+    <div className="relative h-dvh overflow-y-auto">
+      {/* mobile nav bar */}
+      {displayMobileNav && (
+        <div
+          className="fixed h-dvh w-[230px] bg-[#EDEEEA]  z-[101] py-[36px] px-6 flex-col gap-6 flex text-[#8EA262] border-r border-white animate-fadeLeft"
+          ref={mobileNav}
+        >
+          <Close
+            className="size-[30px] self-end cursor-pointer"
+            fill="#8EA262"
+            onClick={handleCloseMobile}
+          />
+          {navBar.map((item) => (
+            <div
+              className="cursor-pointer text-[20px] "
+              onClick={() => {
+                scrollToItem(item)
+                handleCloseMobile()
+              }}
+            >
+              {item}
+            </div>
+          ))}
+        </div>
+      )}
+
       {/* nav bar */}
-      <div className="w-full h-[128px] flex items-center justify-between py-9 px-[24px] lg:px-[72px]  fixed top-0 z-[100] bg-[#475131] bg-opacity-10 border-b border-white lg:border-none">
+      <div className="w-full h-[92px] lg:h-[128px] flex items-center justify-between py-9 px-[24px] lg:px-[72px]  fixed top-0 z-[100] bg-primary-green bg-opacity-10 border-b border-white lg:border-none">
         <Logo
           onClick={() => scrollToItem('')}
           className="cursor-pointer size-[44px] lg:size-[55px]"
@@ -98,7 +136,16 @@ export default function Nav() {
           ))}
         </div>
         {/* mobile nav */}
-        <Bars className="lg:hidden" />
+        <Bars
+          className="lg:hidden cursor-pointer"
+          onClick={() => {
+            if (displayMobileNav) {
+              handleCloseMobile()
+            } else {
+              setDisplayMobileNav(true)
+            }
+          }}
+        />
       </div>
       {/* cover img */}
       <div className="h-[100dvh] overflow-hidden relative z-[15] flex flex-col justify-center lg:justify-start">
@@ -122,7 +169,7 @@ export default function Nav() {
       {/* sidebar */}
       <div className="fixed top-[150px] w-[178px] h-[333px]  overflow-visible z-[10]  right-0  flex-col items-end hidden lg:flex">
         <div
-          className={`${currentSidebarHover === 'phone' ? 'px-[14px] h-[48px] bg-[#475131]' : 'size-12 bg-[#6B7949]'} gap-4 flex items-center justify-center  `}
+          className={`${currentSidebarHover === 'phone' ? 'px-[14px] h-[48px] bg-primary-green' : 'size-12 bg-[#6B7949]'} gap-4 flex items-center justify-center  `}
           onMouseEnter={() => {
             setCurrentSidebarHover('phone')
           }}
@@ -136,7 +183,7 @@ export default function Nav() {
           )}
         </div>
         <div
-          className={`${currentSidebarHover === 'email' ? 'px-[14px] h-[48px] bg-[#475131]' : 'size-12 bg-[#6B7949]'} gap-4 flex items-center justify-center  border-t border-white `}
+          className={`${currentSidebarHover === 'email' ? 'px-[14px] h-[48px] bg-primary-green' : 'size-12 bg-[#6B7949]'} gap-4 flex items-center justify-center  border-t border-white `}
           onMouseEnter={() => {
             setCurrentSidebarHover('email')
           }}
@@ -152,7 +199,7 @@ export default function Nav() {
           )}
         </div>
         <div
-          className={`${currentSidebarHover === 'facebook' ? 'px-[14px] h-[48px] bg-[#475131]' : 'size-12 bg-[#6B7949]'} gap-4 flex items-center justify-center   border-t border-white`}
+          className={`${currentSidebarHover === 'facebook' ? 'px-[14px] h-[48px] bg-primary-green' : 'size-12 bg-[#6B7949]'} gap-4 flex items-center justify-center   border-t border-white`}
           onMouseEnter={() => {
             setCurrentSidebarHover('facebook')
           }}
@@ -166,7 +213,7 @@ export default function Nav() {
           )}
         </div>
         <div
-          className={`${currentSidebarHover === 'youtube' ? 'px-[14px] h-[48px] bg-[#475131]' : 'size-12 bg-[#6B7949]'} gap-4 flex items-center justify-center   border-t border-white`}
+          className={`${currentSidebarHover === 'youtube' ? 'px-[14px] h-[48px] bg-primary-green' : 'size-12 bg-[#6B7949]'} gap-4 flex items-center justify-center   border-t border-white`}
           onMouseEnter={() => {
             setCurrentSidebarHover('youtube')
           }}
@@ -180,7 +227,7 @@ export default function Nav() {
           )}
         </div>
         <div
-          className={`${currentSidebarHover === 'cart' ? 'px-[14px] h-[48px] bg-[#475131]' : 'size-12 bg-[#6B7949]'} gap-4 flex items-center justify-center  border-t border-white `}
+          className={`${currentSidebarHover === 'cart' ? 'px-[14px] h-[48px] bg-primary-green' : 'size-12 bg-[#6B7949]'} gap-4 flex items-center justify-center  border-t border-white `}
           onMouseEnter={() => {
             setCurrentSidebarHover('cart')
           }}
@@ -206,7 +253,7 @@ export default function Nav() {
           {/* img */}
           <div className="min-w-[440px] h-[674px] rounded-2xl bg-slate-400 hidden lg:block"></div>
           <div className="px-6 py-[10px] flex flex-col">
-            <h1 className="text-[#475131] text-[36px] font-bold mb-9">
+            <h1 className="text-primary-green text-[36px] font-bold mb-9">
               Our Product
             </h1>
             <div className="  h-[674px] rounded-2xl bg-slate-400 block lg:hidden mb-[44px]"></div>
@@ -265,7 +312,7 @@ export default function Nav() {
           Company Background
         </span>
         <div className="flex flex-col items-center">
-          <div className="text-[36px] font-bold text-[#475131] lg:w-[60%] text-center mb-[48px] lg:mb-[56px]">
+          <div className="text-[36px] font-bold text-primary-green lg:w-[60%] text-center mb-[48px] lg:mb-[56px]">
             “ Siriphon Thai Fruit company is a leading exporter of fresh
             coconuts and Thai fruits worldwide. ”
           </div>
@@ -292,7 +339,7 @@ export default function Nav() {
           </div>
         </div>
       </div>
-      <div className="py-[56px] px-[24px] lg:py-[96px] lg:px-[135px] bg-[#475131] text-center">
+      <div className="py-[56px] px-[24px] lg:py-[96px] lg:px-[135px] bg-primary-green text-center">
         <h2 className="font-semibold text-[28px] text-white">
           We have a commitment to delivering
         </h2>
