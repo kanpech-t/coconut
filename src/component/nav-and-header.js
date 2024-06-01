@@ -256,7 +256,7 @@ export default function Nav() {
         <div className="flex gap-[72px] items-center">
           {/* img */}
           <div className="min-w-[440px] h-[674px] rounded-2xl bg-slate-400 hidden lg:block"></div>
-          <div className="px-6 py-[10px] flex flex-col">
+          <div className=" py-[10px] flex flex-col">
             <h1 className="text-primary-green text-[28px] lg:text-[36px] font-semibold lg:font-bold mb-9">
               Our Product
             </h1>
