@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 import { ReactComponent as Logo } from '../svg/logo.svg'
 import { ReactComponent as ArrowLeft } from '../svg/arrow-left.svg'
@@ -37,6 +37,8 @@ export default function Nav() {
 
   const [displayMobileNav, setDisplayMobileNav] = useState(false)
 
+  const [displaySidebar, setDisplaySidebar] = useState(false)
+
   const mobileNav = useRef(null)
 
   const aboutUs = useRef(null)
@@ -48,6 +50,8 @@ export default function Nav() {
   const activities = useRef(null)
 
   const contact = useRef(null)
+
+  const mainContainer = useRef(null)
 
   const navBar = [
     'About us',
@@ -120,8 +124,28 @@ export default function Nav() {
     }
   }
 
+  useEffect(() => {
+    const onScroll = () => {
+      if (
+        mainContainer.current.scrollTop > mainContainer.current.clientHeight
+      ) {
+        setDisplaySidebar(true)
+      } else {
+        setDisplaySidebar(false)
+      }
+    }
+    document.getElementById('main').addEventListener('scroll', onScroll)
+
+    return () =>
+      document.getElementById('main').removeEventListener('scroll', onScroll)
+  }, [])
+
   return (
-    <div className="relative h-dvh overflow-y-auto">
+    <div
+      id="main"
+      className="relative h-dvh overflow-y-auto"
+      ref={mainContainer}
+    >
       {/* mobile nav bar */}
       {displayMobileNav && (
         <div
@@ -202,40 +226,41 @@ export default function Nav() {
         </div>
       </div>
       {/* sidebar */}
-      <div
-        className={`fixed top-[150px] ${currentSidebarHover === '' ? 'w-[48px]' : 'w-[178px]'} h-[px]  overflow-visible z-[10]  right-4  flex-col items-end hidden lg:flex`}
-      >
+      {displaySidebar && (
         <div
-          className={`${currentSidebarHover === 'phone' ? 'px-[14px] h-[48px] bg-primary-green' : 'size-12 bg-[#6B7949]'} gap-4 flex items-center justify-center  `}
-          onMouseEnter={() => {
-            setCurrentSidebarHover('phone')
-          }}
-          onMouseLeave={() => {
-            setCurrentSidebarHover('')
-          }}
+          className={`fixed top-[150px] ${currentSidebarHover === '' ? 'w-[48px]' : 'w-[178px]'} h-[px]  overflow-visible z-[10]  right-0  flex-col items-end hidden lg:flex`}
         >
-          <Phone />
-          {currentSidebarHover === 'phone' && (
-            <span className="text-[14px] text-white">+66 91 710 5668</span>
-          )}
-        </div>
-        <div
-          className={`${currentSidebarHover === 'email' ? 'px-[14px] h-[48px] bg-primary-green' : 'size-12 bg-[#6B7949]'} gap-4 flex items-center justify-center  border-t border-white `}
-          onMouseEnter={() => {
-            setCurrentSidebarHover('email')
-          }}
-          onMouseLeave={() => {
-            setCurrentSidebarHover('')
-          }}
-        >
-          <Email />
-          {currentSidebarHover === 'email' && (
-            <span className="text-[14px] text-white">
-              srpthaifruit@gmail.com
-            </span>
-          )}
-        </div>
-        {/* <div
+          <div
+            className={`${currentSidebarHover === 'phone' ? 'px-[14px] h-[48px] bg-primary-green' : 'size-12 bg-[#6B7949]'} gap-4 flex items-center justify-center  `}
+            onMouseEnter={() => {
+              setCurrentSidebarHover('phone')
+            }}
+            onMouseLeave={() => {
+              setCurrentSidebarHover('')
+            }}
+          >
+            <Phone />
+            {currentSidebarHover === 'phone' && (
+              <span className="text-[14px] text-white">+66 91 710 5668</span>
+            )}
+          </div>
+          <div
+            className={`${currentSidebarHover === 'email' ? 'px-[14px] h-[48px] bg-primary-green' : 'size-12 bg-[#6B7949]'} gap-4 flex items-center justify-center  border-t border-white `}
+            onMouseEnter={() => {
+              setCurrentSidebarHover('email')
+            }}
+            onMouseLeave={() => {
+              setCurrentSidebarHover('')
+            }}
+          >
+            <Email />
+            {currentSidebarHover === 'email' && (
+              <span className="text-[14px] text-white">
+                srpthaifruit@gmail.com
+              </span>
+            )}
+          </div>
+          {/* <div
           className={`${currentSidebarHover === 'facebook' ? 'px-[14px] h-[48px] bg-primary-green' : 'size-12 bg-[#6B7949]'} gap-4 flex items-center justify-center   border-t border-white`}
           onMouseEnter={() => {
             setCurrentSidebarHover('facebook')
@@ -249,7 +274,7 @@ export default function Nav() {
             <span className="text-[14px] text-white">coconut</span>
           )}
         </div> */}
-        {/* <div
+          {/* <div
           className={`${currentSidebarHover === 'youtube' ? 'px-[14px] h-[48px] bg-primary-green' : 'size-12 bg-[#6B7949]'} gap-4 flex items-center justify-center   border-t border-white`}
           onMouseEnter={() => {
             setCurrentSidebarHover('youtube')
@@ -263,7 +288,7 @@ export default function Nav() {
             <span className="text-[14px] text-white">coconut</span>
           )}
         </div> */}
-        {/* <div
+          {/* <div
           className={`${currentSidebarHover === 'cart' ? 'px-[14px] h-[48px] bg-primary-green' : 'size-12 bg-[#6B7949]'} gap-4 flex items-center justify-center  border-t border-white `}
           onMouseEnter={() => {
             setCurrentSidebarHover('cart')
@@ -277,10 +302,11 @@ export default function Nav() {
             <span className="text-[14px] text-white">coconut</span>
           )}
         </div> */}
-        <div className="flex justify-center items-center h-[93px] w-12 border-t border-white bg-[#6B7949]  cursor-pointer">
-          <Catalog />
+          <div className="flex justify-center items-center h-[93px] w-12 border-t border-white bg-[#6B7949]  cursor-pointer">
+            <Catalog />
+          </div>
         </div>
-      </div>
+      )}
       {/* about us */}
       <div
         className=" py-[56px] lg:py-[96px] px-[24px] lg:px-[135px] overflow-hidden relative"
@@ -298,12 +324,14 @@ export default function Nav() {
             <h1 className="text-primary-green text-[28px] lg:text-[36px] font-semibold lg:font-bold mb-9">
               Our Product
             </h1>
-            <PictureView
-              customStyle={'lg:hidden mb-[44px]'}
-              customStylePic={'max-h-[500px] sm:max-h-full'}
-              firstImage={require('../picture/our-product-img-1.jpg')}
-              secondImage={require('../picture/our-product-img-2.jpg')}
-            />
+            <div className="flex justify-center">
+              <PictureView
+                customStyle={'lg:hidden mb-[44px]'}
+                customStylePic={'max-h-[500px]  max-w-[400px]'}
+                firstImage={require('../picture/our-product-img-1.jpg')}
+                secondImage={require('../picture/our-product-img-2.jpg')}
+              />
+            </div>
             <p className="text-[16px] lg:text-[18px] font-medium mb-[24px] text-[#1C2014]">
               Our key products consist of authentic aromatic young coconuts,
               cultivated in the lush western region of Thailand— an area
@@ -327,7 +355,7 @@ export default function Nav() {
 
         <img
           src={require('../picture/our-service.png')}
-          className="mt-[72px] w-full  bg-slate-400 rounded-2xl hidden lg:block"
+          className="mt-[72px] w-full   bg-slate-400 rounded-2xl hidden lg:block"
           alt={`our service`}
         />
 
