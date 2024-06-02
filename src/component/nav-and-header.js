@@ -27,6 +27,7 @@ import ball from '../picture/ball.png'
 import { Slide } from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
 import '../index.css'
+import userEvent from '@testing-library/user-event'
 
 export default function Nav() {
   // ====================== useState ======================
@@ -39,6 +40,14 @@ export default function Nav() {
   const mobileNav = useRef(null)
 
   const aboutUs = useRef(null)
+
+  const catalog = useRef(null)
+
+  const serviceProviding = useRef(null)
+
+  const activities = useRef(null)
+
+  const contact = useRef(null)
 
   const navBar = [
     'About us',
@@ -93,6 +102,18 @@ export default function Nav() {
     switch (item) {
       case 'About us':
         aboutUs.current.scrollIntoView({ behavior: 'smooth' })
+        break
+      case 'Catalog':
+        catalog.current.scrollIntoView({ behavior: 'smooth' })
+        break
+      case 'Service Providing':
+        serviceProviding.current.scrollIntoView({ behavior: 'smooth' })
+        break
+      case 'Activities':
+        activities.current.scrollIntoView({ behavior: 'smooth' })
+        break
+      case 'Contact':
+        contact.current.scrollIntoView({ behavior: 'smooth' })
         break
       default:
         window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -384,7 +405,10 @@ export default function Nav() {
       </div>
 
       {/* Our Coconut */}
-      <div className="py-[56px] lg:py-[96px] px-[24px] lg:px-[135px] overflow-hidden relative">
+      <div
+        className="py-[56px] lg:py-[96px] px-[24px] lg:px-[135px] overflow-hidden relative"
+        ref={catalog}
+      >
         <h1 className="text-primary-green text-[36px] lg:text-[64px] text-center font-semibold lg:font-bold mb-9">
           Our Coconut
         </h1>
@@ -600,7 +624,10 @@ export default function Nav() {
       </div>
 
       {/* Service Providing */}
-      <div className="py-[56px] px-[24px] lg:py-[96px] lg:px-[135px] bg-primary-green text-center">
+      <div
+        className="py-[56px] px-[24px] lg:py-[96px] lg:px-[135px] bg-primary-green text-center"
+        ref={serviceProviding}
+      >
         <h2 className="text-white text-[28px] font-[600] lg:text-[36px] lg:font-[700] mb-[72px]">
           Service Providing
         </h2>
@@ -667,7 +694,10 @@ export default function Nav() {
       </div>
 
       {/* Activities */}
-      <div className="px-[24px] py-[56px] lg:px-[135px] lg:py-[96px] flex flex-col items-center bg-[#EDEEEA]">
+      <div
+        className="px-[24px] py-[56px] lg:px-[135px] lg:py-[96px] flex flex-col items-center bg-[#EDEEEA] first-letter"
+        ref={activities}
+      >
         <div className="flex flex-col lg:flex-row gap-[84px]">
           <div className="Detail">
             <h3 className="text-primary-green text-[36px] lg:text-[64px] font-semibold lg:font-bold mb-9">
@@ -712,7 +742,10 @@ export default function Nav() {
       </div>
 
       {/* Footer */}
-      <div className="px-[24px] py-[56px] lg:px-[135px] lg:py-[96px] flex justify-between flex-col lg:flex-row bg-[#475131]">
+      <div
+        className="px-[24px] py-[56px] lg:px-[135px] lg:py-[96px] flex justify-between flex-col lg:flex-row bg-[#475131]"
+        ref={contact}
+      >
         <div className="mb-[48px]">
           <Logo
             onClick={() => scrollToItem('')}
