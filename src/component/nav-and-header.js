@@ -671,7 +671,7 @@ export default function Nav() {
         <h2 className="text-white text-[28px] font-[600] lg:text-[36px] lg:font-[700] mb-[72px]">
           Service Providing
         </h2>
-        <div className="flex flex-col items-center gap-[30px] lg:flex-row lg:justify-evenly">
+        <div className="flex flex-col lg:items-start items-center gap-[54px] lg:gap-[30px] lg:flex-row lg:justify-evenly">
           <div className="w-[359px] flex flex-col items-center">
             <div className="flex justify-center items-center rounded-[16px] w-[300px] overflow-hidden">
               <img
@@ -681,11 +681,11 @@ export default function Nav() {
               />
             </div>
 
-            <div className="text-white font-[600] lg:text-[18px] flex gap-[24px] px-[24px] py-[26px]">
+            <div className="text-white font-[600] lg:text-[18px] flex self-start gap-[24px] px-[24px] lg:py-[26px] pt-[24px] pb-[16px]">
               <Truck className="size-[24px]" />
               <span>Inland Transport</span>
             </div>
-            <p className="text-white">
+            <p className="text-white px-6 self-start text-start text-[18px]">
               We offer product delivery services to ports throughout Thailand,
               tailored to meet specific trading conditions.
             </p>
@@ -700,11 +700,11 @@ export default function Nav() {
               />
             </div>
 
-            <div className="text-white font-[600] lg:text-[18px] flex gap-[24px] px-[24px] py-[26px]">
+            <div className="text-white font-[600] lg:text-[18px] flex self-start gap-[24px] px-[24px] lg:py-[26px] pt-[24px] pb-[16px]">
               <Ship className="size-[24px]" />
               <span>Freight Shipping</span>
             </div>
-            <p className="text-white">
+            <p className="text-white px-6 self-start text-start text-[18px]">
               Our shipping services encompass sea freight, air freight, and
               cross- border transportation, in accordance with the agreed
               Incoterms between the company and the customer
@@ -720,11 +720,11 @@ export default function Nav() {
               />
             </div>
 
-            <div className="text-white font-[600] lg:text-[18px] flex gap-[24px] px-[24px] py-[26px]">
+            <div className="text-white font-[600] lg:text-[18px] flex self-start gap-[24px] px-[24px] lg:py-[26px] pt-[24px] pb-[16px]">
               <Custom className="size-[24px]" />
               <span>Freight Shipping</span>
             </div>
-            <p className="text-white">
+            <p className="text-white px-6 self-start text-start text-[18px]">
               We provide expert assistance with export customs formalities,
               including the preparation of necessary documents to facilitate
               smooth import customs clearance for our customers.
@@ -735,18 +735,18 @@ export default function Nav() {
 
       {/* Activities */}
       <div
-        className="px-[24px] py-[56px] lg:px-[135px] lg:py-[96px] flex flex-col items-center bg-[#EDEEEA] first-letter"
+        className="px-[24px] py-[56px] lg:px-[135px] lg:py-[96px] flex flex-col items-center bg-[#EDEEEA] first-letter "
         ref={activities}
       >
-        <div className="flex flex-col lg:flex-row gap-[84px]">
+        <div className="flex flex-col lg:flex-row gap-[84px] lg:justify-between w-full">
           <div className="Detail">
-            <h3 className="text-primary-green text-[36px] lg:text-[64px] font-semibold lg:font-bold mb-9">
+            <h3 className="text-primary-green text-[28px] lg:text-[36px] font-semibold lg:font-bold  mb-[44px] lg:mb-[72px]">
               Activities
             </h3>
 
             {/* <div className="image h-[674px] rounded-2xl bg-slate-400 block lg:hidden mb-[44px]"></div> */}
             <PictureView
-              customStyle={'block lg:hidden'}
+              customStyle={'block lg:hidden  mb-[44px] '}
               customStylePic={
                 'max-w-[570px] min-w-[370px] max-h-[504px] min-h-[300px] mb-[44px]'
               }
@@ -782,7 +782,7 @@ export default function Nav() {
           <div className="Detail">
             {/* <div className="image h-[674px] rounded-2xl bg-slate-400 block lg:hidden mb-[44px]"></div> */}
             <PictureView
-              customStyle={'block lg:hidden'}
+              customStyle={'block lg:hidden  mb-[44px]'}
               customStylePic={
                 'max-w-[570px] min-w-[370px] max-h-[504px] min-h-[300px] mb-[44px]'
               }
