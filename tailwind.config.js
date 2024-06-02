@@ -15,10 +15,15 @@ module.exports = {
           "0%": { transform: " translateX(0)" },
           "100%": { transform: "translateX(-100%)" },
         },
+        fadeRightIn: {
+          "0%": { transform: " translateX(100%)" },
+          "100%": { transform: "translateX(0)" },
+        },
       },
       animation: {
         fadeLeft: "fadeLeft 0.3s linear", // Note the missing 's' in '0.3s'
         fadeRight: "fadeRight 0.3s linear", // Note the missing 's' in '0.3s'
+        fadeRightIn: "fadeRightIn 0.3s linear",
       },
     },
   },
