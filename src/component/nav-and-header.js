@@ -27,7 +27,7 @@ import ball from '../picture/ball.png'
 import { Slide } from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
 import '../index.css'
-import userEvent from '@testing-library/user-event'
+import PictureView from './picture-view'
 
 export default function Nav() {
   // ====================== useState ======================
@@ -286,12 +286,24 @@ export default function Nav() {
       >
         <div className="flex gap-[72px] items-center">
           {/* img */}
-          <div className="min-w-[440px] h-[674px] rounded-2xl bg-slate-400 hidden lg:block"></div>
+          {/* <div className="min-w-[440px] h-[674px] rounded-2xl bg-slate-400 hidden lg:block"></div> */}
+          <PictureView
+            customStyle={'hidden lg:block '}
+            customStylePic={'max-w-[440px] min-w-[440px] h-[674px] '}
+            firstImage={require('../picture/our-product-img-1.jpg')}
+            secondImage={require('../picture/our-product-img-2.jpg')}
+          />
           <div className=" py-[10px] flex flex-col">
             <h1 className="text-primary-green text-[28px] lg:text-[36px] font-semibold lg:font-bold mb-9">
               Our Product
             </h1>
-            <div className="  h-[674px] rounded-2xl bg-slate-400 block lg:hidden mb-[44px]"></div>
+            {/* <div className="  h-[674px] rounded-2xl bg-slate-400 block lg:hidden mb-[44px]"></div> */}
+            <PictureView
+              customStyle={'lg:hidden mb-[44px]'}
+              customStylePic={'max-h-[500px] sm:max-h-full'}
+              firstImage={require('../picture/our-product-img-1.jpg')}
+              secondImage={require('../picture/our-product-img-2.jpg')}
+            />
             <p className="text-[16px] lg:text-[18px] font-medium mb-[24px] text-[#1C2014]">
               Our key products consist of authentic aromatic young coconuts,
               cultivated in the lush western region of Thailand— an area
