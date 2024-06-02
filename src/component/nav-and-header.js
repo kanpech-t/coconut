@@ -643,7 +643,7 @@ export default function Nav() {
         <h2 className="text-white text-[28px] font-[600] lg:text-[36px] lg:font-[700] mb-[72px]">
           Service Providing
         </h2>
-        <div className="flex flex-col justify-center lg:flex-row lg:justify-evenly">
+        <div className="flex flex-col items-center gap-[30px] lg:flex-row lg:justify-evenly">
           <div className="w-[359px] flex flex-col items-center">
             <div className="flex justify-center items-center rounded-[16px] w-[300px] overflow-hidden">
               <img
@@ -716,7 +716,15 @@ export default function Nav() {
               Activities
             </h3>
 
-            <div className="image h-[674px] rounded-2xl bg-slate-400 block lg:hidden mb-[44px]"></div>
+            {/* <div className="image h-[674px] rounded-2xl bg-slate-400 block lg:hidden mb-[44px]"></div> */}
+            <PictureView
+              customStyle={'block lg:hidden'}
+              customStylePic={
+                'max-w-[570px] min-w-[370px] max-h-[504px] min-h-[300px] mb-[44px]'
+              }
+              firstImage={require('../picture/activity1.png')}
+              secondImage={require('../picture/activity2.png')}
+            />
 
             <p className="text-[#394127] font-[600] text-[28px]">
               Lorem ipsum t, consectetur adipiscing elit. Lorem ipsum t,
@@ -729,14 +737,30 @@ export default function Nav() {
             </p>
           </div>
 
-          <div className="image w-[570px] h-[504px] rounded-2xl bg-slate-400 hidden lg:block mb-[44px]"></div>
+          {/* <div className="image w-[570px] h-[504px] rounded-2xl bg-slate-400 hidden lg:block mb-[44px]"></div> */}
+          <PictureView
+            customStyle={'hidden lg:block '}
+            customStylePic={
+              'max-w-[570px] min-w-[370px] max-h-[504px] min-h-[300px]  mb-[44px]'
+            }
+            firstImage={require('../picture/activity1.png')}
+            secondImage={require('../picture/activity2.png')}
+          />
         </div>
       </div>
 
       <div className="px-[24px] py-[56px] lg:px-[135px] lg:py-[96px] flex flex-col items-center">
         <div className="flex flex-col lg:flex-row-reverse gap-[84px]">
           <div className="Detail">
-            <div className="image h-[674px] rounded-2xl bg-slate-400 block lg:hidden mb-[44px]"></div>
+            {/* <div className="image h-[674px] rounded-2xl bg-slate-400 block lg:hidden mb-[44px]"></div> */}
+            <PictureView
+              customStyle={'block lg:hidden'}
+              customStylePic={
+                'max-w-[570px] min-w-[370px] max-h-[504px] min-h-[300px] mb-[44px]'
+              }
+              firstImage={require('../picture/activity3.png')}
+              secondImage={require('../picture/activity4.png')}
+            />
 
             <p className="text-[#394127] font-[600] text-[28px]">
               Lorem ipsum t, consectetur adipiscing elit. Lorem ipsum t,
@@ -749,7 +773,15 @@ export default function Nav() {
             </p>
           </div>
 
-          <div className="image w-[570px] h-[504px] rounded-2xl bg-slate-400 hidden lg:block mb-[44px]"></div>
+          {/* <div className="image w-[570px] h-[504px] rounded-2xl bg-slate-400 hidden lg:block mb-[44px]"></div> */}
+          <PictureView
+            customStyle={'hidden lg:block '}
+            customStylePic={
+              'max-w-[570px] min-w-[370px] max-h-[504px] min-h-[300px] mb-[44px]'
+            }
+            firstImage={require('../picture/activity3.png')}
+            secondImage={require('../picture/activity4.png')}
+          />
         </div>
       </div>
 
