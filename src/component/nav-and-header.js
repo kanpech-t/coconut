@@ -118,7 +118,7 @@ export default function Nav() {
       )}
 
       {/* nav bar */}
-      <div className="w-full h-[92px] lg:h-[128px] flex items-center justify-between py-9 px-[24px] lg:px-[72px]  fixed top-0 z-[100] bg-primary-green bg-opacity-10 border-b border-white lg:border-none">
+      <div className="w-full h-[92px] lg:h-[128px] flex items-center justify-between py-9 px-[24px] lg:px-[72px]  fixed top-0 z-[100] bg-primary-green bg-opacity-[0.07] border-b border-white lg:border-none">
         <Logo
           onClick={() => scrollToItem('')}
           className="cursor-pointer size-[44px] lg:size-[55px]"
@@ -172,7 +172,9 @@ export default function Nav() {
         </div>
       </div>
       {/* sidebar */}
-      <div className="fixed top-[150px] w-[178px] h-[333px]  overflow-visible z-[10]  right-0  flex-col items-end hidden lg:flex">
+      <div
+        className={`fixed top-[150px] ${currentSidebarHover === '' ? 'w-[48px]' : 'w-[178px]'} h-[px]  overflow-visible z-[10]  right-4  flex-col items-end hidden lg:flex`}
+      >
         <div
           className={`${currentSidebarHover === 'phone' ? 'px-[14px] h-[48px] bg-primary-green' : 'size-12 bg-[#6B7949]'} gap-4 flex items-center justify-center  `}
           onMouseEnter={() => {
@@ -203,7 +205,7 @@ export default function Nav() {
             </span>
           )}
         </div>
-        <div
+        {/* <div
           className={`${currentSidebarHover === 'facebook' ? 'px-[14px] h-[48px] bg-primary-green' : 'size-12 bg-[#6B7949]'} gap-4 flex items-center justify-center   border-t border-white`}
           onMouseEnter={() => {
             setCurrentSidebarHover('facebook')
@@ -216,8 +218,8 @@ export default function Nav() {
           {currentSidebarHover === 'facebook' && (
             <span className="text-[14px] text-white">coconut</span>
           )}
-        </div>
-        <div
+        </div> */}
+        {/* <div
           className={`${currentSidebarHover === 'youtube' ? 'px-[14px] h-[48px] bg-primary-green' : 'size-12 bg-[#6B7949]'} gap-4 flex items-center justify-center   border-t border-white`}
           onMouseEnter={() => {
             setCurrentSidebarHover('youtube')
@@ -230,8 +232,8 @@ export default function Nav() {
           {currentSidebarHover === 'youtube' && (
             <span className="text-[14px] text-white">coconut</span>
           )}
-        </div>
-        <div
+        </div> */}
+        {/* <div
           className={`${currentSidebarHover === 'cart' ? 'px-[14px] h-[48px] bg-primary-green' : 'size-12 bg-[#6B7949]'} gap-4 flex items-center justify-center  border-t border-white `}
           onMouseEnter={() => {
             setCurrentSidebarHover('cart')
@@ -244,7 +246,7 @@ export default function Nav() {
           {currentSidebarHover === 'cart' && (
             <span className="text-[14px] text-white">coconut</span>
           )}
-        </div>
+        </div> */}
         <div className="flex justify-center items-center h-[93px] w-12 border-t border-white bg-[#6B7949]  cursor-pointer">
           <Catalog />
         </div>
@@ -256,7 +258,6 @@ export default function Nav() {
       >
         <div className="flex gap-[72px] items-center">
           {/* img */}
-          {/* <div className="min-w-[440px] h-[674px] rounded-2xl bg-slate-400 hidden lg:block"></div> */}
           <PictureView
             customStyle={'hidden lg:block '}
             customStylePic={'max-w-[440px] min-w-[440px] h-[674px] '}
@@ -267,7 +268,6 @@ export default function Nav() {
             <h1 className="text-primary-green text-[28px] lg:text-[36px] font-semibold lg:font-bold mb-9">
               Our Product
             </h1>
-            {/* <div className="  h-[674px] rounded-2xl bg-slate-400 block lg:hidden mb-[44px]"></div> */}
             <PictureView
               customStyle={'lg:hidden mb-[44px]'}
               customStylePic={'max-h-[500px] sm:max-h-full'}
