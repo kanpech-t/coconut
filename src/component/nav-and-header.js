@@ -29,6 +29,8 @@ import 'react-slideshow-image/dist/styles.css'
 import '../index.css'
 import PictureView from './picture-view'
 
+import ImageSlide from './image-slide'
+
 export default function Nav() {
   // ====================== useState ======================
   const [currentBackGroundPage, setCurrentBackGroundPage] = useState(0)
@@ -464,7 +466,7 @@ export default function Nav() {
                 <img
                   alt="diamond"
                   src={diamond}
-                  className="rounded-2xl lg:min-w-[250px] max-w-[377px]"
+                  className="rounded-2xl lg:min-w-[250px] max-w-[377px] max-h-[234px] lg:max-h-[310px]"
                 />
 
                 <div className="text-[#475131] text-[16px] lg:text-[18px] font-[600]">
@@ -478,7 +480,7 @@ export default function Nav() {
                     <img
                       alt="greenCutDiamond"
                       src={require('../picture/greenCut.png')}
-                      className="rounded-2xl lg:w-[172.5px] max-w-[377px]"
+                      className="rounded-2xl lg:w-[172.5px] max-w-[377px] max-h-[234px] lg:max-h-[310px]"
                     />
                     <div className="text-[#475131] text-[16px] lg:text-[18px] font-[600]">
                       Green Cut Diamond
@@ -490,7 +492,7 @@ export default function Nav() {
                   <img
                     alt="partialGreen"
                     src={partialGreen}
-                    className="rounded-2xl lg:w-[172.5px] max-w-[377px]"
+                    className="rounded-2xl lg:w-[230px] max-w-[377px] max-h-[234px] lg:max-h-[310px]"
                   />
                   <div className="text-[#475131] text-[16px] lg:text-[18px] font-[600]">
                     Partial Green Diamond
@@ -579,7 +581,7 @@ export default function Nav() {
                 <img
                   alt="cupcake"
                   src={cupcake}
-                  className="rounded-2xl lg:min-w-[250px] max-w-[377px]"
+                  className="rounded-2xl lg:min-w-[250px] max-w-[377px] max-h-[234px] lg:max-h-[310px]"
                 />
                 <div className="text-[#475131] text-[16px] lg:text-[18px] font-[600]">
                   Cupcake
@@ -591,7 +593,7 @@ export default function Nav() {
                   <img
                     alt="ball"
                     src={ball}
-                    className="rounded-2xl lg:min-w-[250px] max-w-[377px]"
+                    className="rounded-2xl lg:min-w-[250px] max-w-[377px] max-h-[234px] lg:max-h-[310px]"
                   />
                   <div className="text-[#475131] text-[16px] lg:text-[18px] font-[600]">
                     Ball
@@ -760,6 +762,13 @@ export default function Nav() {
               firstImage={require('../picture/activity1.png')}
               secondImage={require('../picture/activity2.png')}
             />
+            <ImageSlide
+              images={['../picture/activity1.png', '../picture/activity2.png']}
+              customStyle={'block lg:hidden  mb-[44px] '}
+              customStylePic={
+                'max-w-[570px]  max-h-[504px] min-h-[300px] mb-[44px]'
+              }
+            />
 
             <p className="text-[#394127] font-[600] text-[28px]">
               Our facility
@@ -773,6 +782,14 @@ export default function Nav() {
             }
             firstImage={require('../picture/activity1.png')}
             secondImage={require('../picture/activity2.png')}
+          />
+
+          <ImageSlide
+            images={['../picture/activity1.png', '../picture/activity2.png']}
+            customStyle={'hidden lg:block '}
+            customStylePic={
+              'max-w-[570px] min-w-[370px] max-h-[504px] min-h-[300px]  mb-[44px]'
+            }
           />
         </div>
       </div>
