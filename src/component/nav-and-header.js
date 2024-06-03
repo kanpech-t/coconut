@@ -477,7 +477,7 @@ export default function Nav() {
                   <div className="flex flex-col justify-center items-center gap-[16px]">
                     <img
                       alt="greenCutDiamond"
-                      src={partialGreen}
+                      src={require('../picture/greenCut.png')}
                       className="rounded-2xl lg:min-w-[250px] max-w-[377px] h-[310px]"
                     />
                     <div className="text-[#475131] text-[16px] lg:text-[18px] font-[600]">
