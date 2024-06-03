@@ -458,13 +458,13 @@ export default function Nav() {
           <h2 className="text-[#475131] text-[20px] lg:text-[28px] font-[600] mb-9">
             Shaped Coconut
           </h2>
-          <div className="flex gap-[48px] xl:flex-row flex-col">
-            <div className="images flex xl:flex-col flex-row gap-[16px] overflow-x-scroll lg:overflow-x-hidden lg:min-w-[377px]">
+          <div className="flex gap-[48px] lg:flex-row flex-col">
+            <div className="images flex lg:flex-col flex-row gap-[16px] overflow-x-scroll lg:overflow-x-hidden lg:min-w-[377px]">
               <div className="flex flex-col justify-center items-center gap-[16px]">
                 <img
                   alt="diamond"
                   src={diamond}
-                  className="rounded-2xl lg:min-w-[250px] max-w-[377px] h-[310px]"
+                  className="rounded-2xl lg:min-w-[250px] max-w-[377px]"
                 />
 
                 <div className="text-[#475131] text-[16px] lg:text-[18px] font-[600]">
@@ -478,7 +478,7 @@ export default function Nav() {
                     <img
                       alt="greenCutDiamond"
                       src={require('../picture/greenCut.png')}
-                      className="rounded-2xl lg:min-w-[250px] max-w-[377px] h-[310px]"
+                      className="rounded-2xl lg:w-[172.5px] max-w-[377px]"
                     />
                     <div className="text-[#475131] text-[16px] lg:text-[18px] font-[600]">
                       Green Cut Diamond
@@ -490,7 +490,7 @@ export default function Nav() {
                   <img
                     alt="partialGreen"
                     src={partialGreen}
-                    className="rounded-2xl lg:min-w-[250px] max-w-[377px] h-[310px]"
+                    className="rounded-2xl lg:w-[172.5px] max-w-[377px]"
                   />
                   <div className="text-[#475131] text-[16px] lg:text-[18px] font-[600]">
                     Partial Green Diamond
@@ -573,13 +573,13 @@ export default function Nav() {
           <h2 className="text-[#475131] text-[20px] lg:text-[28px] font-[600] mb-9">
             Polished Coconut
           </h2>
-          <div className="flex gap-[48px] xl:flex-row-reverse flex-col">
-            <div className="images flex xl:flex-col flex-row gap-[16px] overflow-x-scroll  lg:overflow-x-hidden lg:min-w-[377px]">
+          <div className="flex gap-[48px] lg:flex-row-reverse flex-col">
+            <div className="images flex lg:flex-col flex-row gap-[16px] overflow-x-scroll  lg:overflow-x-hidden lg:min-w-[377px]">
               <div className="flex flex-col justify-center items-center gap-[16px]">
                 <img
                   alt="cupcake"
                   src={cupcake}
-                  className="rounded-2xl lg:min-w-[250px] max-w-[377px] h-[310px]"
+                  className="rounded-2xl lg:min-w-[250px] max-w-[377px]"
                 />
                 <div className="text-[#475131] text-[16px] lg:text-[18px] font-[600]">
                   Cupcake
@@ -591,7 +591,7 @@ export default function Nav() {
                   <img
                     alt="ball"
                     src={ball}
-                    className="rounded-2xl lg:min-w-[250px] max-w-[377px] h-[310px]"
+                    className="rounded-2xl lg:min-w-[250px] max-w-[377px]"
                   />
                   <div className="text-[#475131] text-[16px] lg:text-[18px] font-[600]">
                     Ball
@@ -762,13 +762,7 @@ export default function Nav() {
             />
 
             <p className="text-[#394127] font-[600] text-[28px]">
-              Lorem ipsum t, consectetur adipiscing elit. Lorem ipsum t,
-              consectetur adipiscing el.
-            </p>
-            <p className="text-[#1C2014] text-[18px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Pellentesque id urna efficitur, pretium ex vitae, suscipit eros.
-              Aliquam mi ipsum, sagittis et tortor non, ultricies.
+              Our facility
             </p>
           </div>
 
@@ -784,7 +778,7 @@ export default function Nav() {
       </div>
 
       <div className="px-[24px] py-[56px] lg:px-[135px] lg:py-[96px] flex flex-col items-center">
-        <div className="flex flex-col lg:flex-row-reverse gap-[84px]">
+        <div className="flex flex-col lg:flex-row-reverse gap-[84px] lg:justify-between w-full">
           <div className="Detail">
             <PictureView
               customStyle={'block lg:hidden  mb-[44px]'}
@@ -794,13 +788,7 @@ export default function Nav() {
             />
 
             <p className="text-[#394127] font-[600] text-[28px]">
-              Lorem ipsum t, consectetur adipiscing elit. Lorem ipsum t,
-              consectetur adipiscing el.
-            </p>
-            <p className="text-[#1C2014] text-[18px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Pellentesque id urna efficitur, pretium ex vitae, suscipit eros.
-              Aliquam mi ipsum, sagittis et tortor non, ultricies.
+              Our coconut farm
             </p>
           </div>
 
