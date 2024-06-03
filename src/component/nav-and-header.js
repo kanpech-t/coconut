@@ -802,7 +802,7 @@ export default function Nav() {
               ]}
               customStyle={'block lg:hidden'}
               customStylePic={
-                'rounded-2xl max-w-[570px] min-w-[370px] max-h-[504px] min-h-[300px]  mb-[44px]'
+                'rounded-2xl max-w-[570px]  max-h-[504px] min-h-[300px]  mb-[44px]'
               }
             />
 
