@@ -29,7 +29,7 @@ export default function PictureView({
       >
         {currentImg === 1 ? (
           <ArrowRight
-            className="absolute size-9 right-0 z-10 "
+            className="absolute size-9 right-0 z-10 cursor-pointer"
             onClick={() => {
               handleChangeImg('goNext')
             }}
