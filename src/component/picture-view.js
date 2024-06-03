@@ -44,13 +44,13 @@ export default function PictureView({
         )}
         <img
           src={firstImage}
-          className={`${currentImg === 1 ? 'opacity-100' : 'opacity-0'} w-full `}
+          className={`${currentImg === 1 ? 'opacity-100' : 'opacity-0'} w-full  transition-opacity duration-500 `}
           alt={`Slide 1`}
           ref={img1}
         />
         <img
           src={secondImage}
-          className={`${currentImg === 2 ? 'opacity-100' : 'opacity-0'} w-full absolute left-0`}
+          className={`${currentImg === 2 ? 'opacity-100' : 'opacity-0'} w-full absolute left-0  transition-opacity duration-500 `}
           alt={`Slide 2`}
           ref={img2}
         />
