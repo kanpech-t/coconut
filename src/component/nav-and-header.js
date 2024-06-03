@@ -471,63 +471,67 @@ export default function Nav() {
               </div>
             </div>
 
-            <div className="details flex flex-col grow gap-[48px] bg-[#EDEEEA] px-[32px] py-[72px] rounded-[16px]">
-              <div className="flex flex-col justify-between lg:flex-row gap-[56px]">
-                <div className="heading w-[147px] text-[#475131] font-[600] text-[18px]">
+            <div className="details flex flex-col grow gap-[24px] lg:gap-[48px] bg-[#EDEEEA] px-[24px] py-[32px] lg:px-[32px] lg:py-[72px] rounded-[16px]">
+              <div className="flex flex-col justify-between lg:flex-row">
+                <div className="heading w-[147px] text-[#475131] font-[600] text-[18px] mb-[20px]">
                   Packaging
                 </div>
-                <div className="flex flex-col">
-                  <div className="subheading w-[266px] text-[#6B7949] font-[600] text-[16px]">
+                <div className="flex flex-col ">
+                  <div className="subheading w-[266px] text-[#6B7949] font-[600] text-[16px] mb-[16px] lg:mg-[24px]">
                     Size dependent
                   </div>
                   <div className="detail text-[16px]">
-                    <div>9 Units / Carton</div>
-                    <div>12 Units / Carton</div>
+                    <div className="mb-[8px]">9 Units / Carton</div>
+                    <div className="mb-[8px]">12 Units / Carton</div>
                   </div>
                 </div>
                 <div className=" w-[266px]"></div>
               </div>
 
-              <hr />
+              <hr className="border-[#B5B9AD] border-t" />
 
-              <div className="flex flex-col justify-between lg:flex-row gap-[56px]">
-                <div className="heading w-[147px] text-[#475131] font-[600] text-[18px]">
+              <div className="flex flex-col justify-between lg:flex-row">
+                <div className="heading w-[147px] text-[#475131] font-[600] text-[18px] mb-[20px]">
                   Container Load
                 </div>
-                <div className="flex flex-col">
-                  <div className="subheading w-[266px] text-[#6B7949] font-[600] text-[16px]">
+                <div className="flex flex-col mb-[20px]">
+                  <div className="subheading w-[266px] text-[#6B7949] font-[600] text-[16px] mb-[16px] lg:mg-[24px]">
                     Pallet
                   </div>
                   <div className="detail text-[16px]">
-                    <div>990 Carton / 20'RF</div>
-                    <div>1980 Carton / 40'RF (High Cube)</div>
+                    <div className="mb-[8px]">990 Carton / 20'RF</div>
+                    <div className="mb-[8px]">
+                      1980 Carton / 40'RF (High Cube)
+                    </div>
                   </div>
                 </div>
                 <div className="flex flex-col">
-                  <div className="subheading w-[266px] text-[#6B7949] font-[600] text-[16px]">
+                  <div className="subheading w-[266px] text-[#6B7949] font-[600] text-[16px] mb-[16px] lg:mg-[24px]">
                     No Pallet
                   </div>
                   <div className="detail text-[16px]">
-                    <div>1025 Carton / 20'RF</div>
-                    <div>2052 Carton / 40'RF (High Cube)</div>
+                    <div className="mb-[8px]">1025 Carton / 20'RF</div>
+                    <div className="mb-[8px]">
+                      2052 Carton / 40'RF (High Cube)
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <hr />
+              <hr className="border-[#B5B9AD] border-t" />
 
-              <div className="flex flex-col justify-between lg:flex-row gap-[56px]">
-                <div className="heading w-[147px] text-[#475131] font-[600] text-[18px]">
+              <div className="flex flex-col justify-between lg:flex-row">
+                <div className="heading w-[147px] text-[#475131] font-[600] text-[18px] mb-[20px]">
                   MAQ
                 </div>
                 <div className="detail  w-[266px] text-[16px]">1x20'RF</div>
                 <div className=" w-[266px]"></div>
               </div>
 
-              <hr />
+              <hr className="border-[#B5B9AD] border-t" />
 
-              <div className="flex flex-col  justify-between lg:flex-row gap-[56px]">
-                <div className="heading w-[147px] text-[#475131] font-[600] text-[18px]">
+              <div className="flex flex-col  justify-between lg:flex-row">
+                <div className="heading w-[147px] text-[#475131] font-[600] text-[18px] mb-[20px]">
                   Payment Term
                 </div>
                 <div className="detail  w-[266px] text-[16px]">L/C or T/T</div>
@@ -568,63 +572,67 @@ export default function Nav() {
               </div>
             </div>
 
-            <div className="details flex flex-col grow gap-[48px] bg-[#EDEEEA] px-[32px] py-[72px] rounded-[16px]">
-              <div className="flex flex-col justify-between lg:flex-row gap-[56px]">
-                <div className="heading w-[147px] text-[#475131] font-[600] text-[18px]">
+            <div className="details flex flex-col grow gap-[24px] lg:gap-[48px] bg-[#EDEEEA] px-[24px] py-[32px] lg:px-[32px] lg:py-[72px] rounded-[16px]">
+              <div className="flex flex-col justify-between lg:flex-row">
+                <div className="heading w-[147px] text-[#475131] font-[600] text-[18px] mb-[20px]">
                   Packaging
                 </div>
-                <div className="flex flex-col">
-                  <div className="subheading w-[266px] text-[#6B7949] font-[600] text-[16px]">
+                <div className="flex flex-col ">
+                  <div className="subheading w-[266px] text-[#6B7949] font-[600] text-[16px] mb-[16px] lg:mg-[24px]">
                     Size dependent
                   </div>
                   <div className="detail text-[16px]">
-                    <div>32 Units / Carton</div>
-                    <div>40 Units / Carton</div>
+                    <div className="mb-[8px]">32 Units / Carton</div>
+                    <div className="mb-[8px]">40 Units / Carton</div>
                   </div>
                 </div>
                 <div className=" w-[266px]"></div>
               </div>
 
-              <hr />
+              <hr className="border-[#B5B9AD] border-t" />
 
-              <div className="flex flex-col justify-between lg:flex-row gap-[56px]">
-                <div className="heading w-[147px] text-[#475131] font-[600] text-[18px]">
+              <div className="flex flex-col justify-between lg:flex-row">
+                <div className="heading w-[147px] text-[#475131] font-[600] text-[18px] mb-[20px]">
                   Container Load
                 </div>
-                <div className="flex flex-col">
-                  <div className="subheading w-[266px] text-[#6B7949] font-[600] text-[16px]">
+                <div className="flex flex-col mb-[20px]">
+                  <div className="subheading w-[266px] text-[#6B7949] font-[600] text-[16px] mb-[16px] lg:mg-[24px]">
                     Pallet
                   </div>
                   <div className="detail text-[16px]">
-                    <div>990 Carton / 20'RF</div>
-                    <div>1980 Carton / 40'RF (High Cube)</div>
+                    <div className="mb-[8px]">990 Carton / 20'RF</div>
+                    <div className="mb-[8px]">
+                      1980 Carton / 40'RF (High Cube)
+                    </div>
                   </div>
                 </div>
                 <div className="flex flex-col">
-                  <div className="subheading w-[266px] text-[#6B7949] font-[600] text-[16px]">
+                  <div className="subheading w-[266px] text-[#6B7949] font-[600] text-[16px] mb-[16px] lg:mg-[24px]">
                     No Pallet
                   </div>
                   <div className="detail text-[16px]">
-                    <div>1025 Carton / 20'RF</div>
-                    <div>2052 Carton / 40'RF (High Cube)</div>
+                    <div className="mb-[8px]">1025 Carton / 20'RF</div>
+                    <div className="mb-[8px]">
+                      2052 Carton / 40'RF (High Cube)
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <hr />
+              <hr className="border-[#B5B9AD] border-t" />
 
-              <div className="flex flex-col justify-between lg:flex-row gap-[56px]">
-                <div className="heading w-[147px] text-[#475131] font-[600] text-[18px]">
+              <div className="flex flex-col justify-between lg:flex-row">
+                <div className="heading w-[147px] text-[#475131] font-[600] text-[18px] mb-[20px]">
                   MAQ
                 </div>
                 <div className="detail  w-[266px] text-[16px]">1x20'RF</div>
                 <div className=" w-[266px]"></div>
               </div>
 
-              <hr />
+              <hr className="border-[#B5B9AD] border-t" />
 
-              <div className="flex flex-col  justify-between lg:flex-row gap-[56px]">
-                <div className="heading w-[147px] text-[#475131] font-[600] text-[18px]">
+              <div className="flex flex-col  justify-between lg:flex-row">
+                <div className="heading w-[147px] text-[#475131] font-[600] text-[18px] mb-[20px]">
                   Payment Term
                 </div>
                 <div className="detail  w-[266px] text-[16px]">L/C or T/T</div>
