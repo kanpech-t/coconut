@@ -458,8 +458,8 @@ export default function Nav() {
           <h2 className="text-[#475131] text-[20px] lg:text-[28px] font-[600] mb-9">
             Shaped Coconut
           </h2>
-          <div className="flex gap-[48px] lg:flex-row flex-col">
-            <div className="images flex lg:flex-col flex-row gap-[16px] overflow-x-scroll">
+          <div className="flex gap-[48px] xl:flex-row flex-col">
+            <div className="images flex xl:flex-col flex-row gap-[16px] overflow-x-scroll min-w-[377px]">
               <div className="flex flex-col justify-center items-center gap-[16px]">
                 <img
                   alt="diamond"
@@ -573,8 +573,8 @@ export default function Nav() {
           <h2 className="text-[#475131] text-[20px] lg:text-[28px] font-[600] mb-9">
             Polished Coconut
           </h2>
-          <div className="flex gap-[48px] lg:flex-row-reverse flex-col">
-            <div className="images flex lg:flex-col flex-row gap-[16px] overflow-x-scroll">
+          <div className="flex gap-[48px] xl:flex-row-reverse flex-col">
+            <div className="images flex xl:flex-col flex-row gap-[16px] overflow-x-scroll  min-w-[377px]">
               <div className="flex flex-col justify-center items-center gap-[16px]">
                 <img
                   alt="cupcake"
