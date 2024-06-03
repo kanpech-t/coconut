@@ -459,12 +459,12 @@ export default function Nav() {
             Shaped Coconut
           </h2>
           <div className="flex gap-[48px] xl:flex-row flex-col">
-            <div className="images flex xl:flex-col flex-row gap-[16px] overflow-x-scroll lg:overflow-x-hidden min-w-[377px]">
+            <div className="images flex xl:flex-col flex-row gap-[16px] overflow-x-scroll lg:overflow-x-hidden lg:min-w-[377px]">
               <div className="flex flex-col justify-center items-center gap-[16px]">
                 <img
                   alt="diamond"
                   src={diamond}
-                  className="rounded-2xl min-w-[250px] max-w-[377px] h-[310px]"
+                  className="rounded-2xl lg:min-w-[250px] max-w-[377px] h-[310px]"
                 />
 
                 <div className="text-[#475131] text-[16px] lg:text-[18px] font-[600]">
@@ -478,7 +478,7 @@ export default function Nav() {
                     <img
                       alt="greenCutDiamond"
                       src={partialGreen}
-                      className="rounded-2xl min-w-[250px] max-w-[377px] h-[310px]"
+                      className="rounded-2xl lg:min-w-[250px] max-w-[377px] h-[310px]"
                     />
                     <div className="text-[#475131] text-[16px] lg:text-[18px] font-[600]">
                       Green Cut Diamond
@@ -490,7 +490,7 @@ export default function Nav() {
                   <img
                     alt="partialGreen"
                     src={partialGreen}
-                    className="rounded-2xl min-w-[250px] max-w-[377px] h-[310px]"
+                    className="rounded-2xl lg:min-w-[250px] max-w-[377px] h-[310px]"
                   />
                   <div className="text-[#475131] text-[16px] lg:text-[18px] font-[600]">
                     Partial Green Diamond
@@ -574,12 +574,12 @@ export default function Nav() {
             Polished Coconut
           </h2>
           <div className="flex gap-[48px] xl:flex-row-reverse flex-col">
-            <div className="images flex xl:flex-col flex-row gap-[16px] overflow-x-scroll  lg:overflow-x-hidden min-w-[377px]">
+            <div className="images flex xl:flex-col flex-row gap-[16px] overflow-x-scroll  lg:overflow-x-hidden lg:min-w-[377px]">
               <div className="flex flex-col justify-center items-center gap-[16px]">
                 <img
                   alt="cupcake"
                   src={cupcake}
-                  className="rounded-2xl min-w-[250px] max-w-[377px] h-[310px]"
+                  className="rounded-2xl lg:min-w-[250px] max-w-[377px] h-[310px]"
                 />
                 <div className="text-[#475131] text-[16px] lg:text-[18px] font-[600]">
                   Cupcake
@@ -591,7 +591,7 @@ export default function Nav() {
                   <img
                     alt="ball"
                     src={ball}
-                    className="rounded-2xl min-w-[250px] max-w-[377px] h-[310px]"
+                    className="rounded-2xl lg:min-w-[250px] max-w-[377px] h-[310px]"
                   />
                   <div className="text-[#475131] text-[16px] lg:text-[18px] font-[600]">
                     Ball
@@ -680,12 +680,12 @@ export default function Nav() {
           Service Providing
         </h2>
         <div className="flex flex-col lg:items-start items-center gap-[54px] lg:gap-[30px] lg:flex-row lg:justify-evenly">
-          <div className="w-[359px] flex flex-col items-center">
-            <div className="flex justify-center items-center rounded-[16px] w-[300px] overflow-hidden">
+          <div className="lg:w-[359px] flex flex-col items-center">
+            <div className="flex justify-center items-center rounded-[16px] lg:w-[300px] overflow-hidden">
               <img
                 alt="truck"
                 src={require('../picture/service-truck.png')}
-                className="rounded-[16px] w-[300px]"
+                className="rounded-[16px]"
               />
             </div>
 
@@ -699,12 +699,12 @@ export default function Nav() {
             </p>
           </div>
 
-          <div className="w-[359px] flex flex-col items-center">
-            <div className="flex justify-center items-center rounded-[16px] w-[300px] overflow-hidden">
+          <div className="lg:w-[359px] flex flex-col items-center">
+            <div className="flex justify-center items-center rounded-[16px] lg:w-[300px] overflow-hidden">
               <img
                 alt="ship"
                 src={require('../picture/service-ship.png')}
-                className="rounded-[16px] w-[300px]"
+                className="rounded-[16px] "
               />
             </div>
 
@@ -719,12 +719,12 @@ export default function Nav() {
             </p>
           </div>
 
-          <div className="w-[359px] flex flex-col items-center">
-            <div className="flex justify-center items-center rounded-[16px] w-[300px] overflow-hidden">
+          <div className="lg:w-[359px] flex flex-col items-center">
+            <div className="flex justify-center items-center rounded-[16px] lg:w-[300px] overflow-hidden">
               <img
                 alt="custom"
                 src={require('../picture/service-custom.png')}
-                className="rounded-[16px] w-[300px]"
+                className="rounded-[16px]"
               />
             </div>
 
@@ -752,11 +752,10 @@ export default function Nav() {
               Activities
             </h3>
 
-            {/* <div className="image h-[674px] rounded-2xl bg-slate-400 block lg:hidden mb-[44px]"></div> */}
             <PictureView
               customStyle={'block lg:hidden  mb-[44px] '}
               customStylePic={
-                'max-w-[570px] min-w-[370px] max-h-[504px] min-h-[300px] mb-[44px]'
+                'max-w-[570px]  max-h-[504px] min-h-[300px] mb-[44px]'
               }
               firstImage={require('../picture/activity1.png')}
               secondImage={require('../picture/activity2.png')}
@@ -773,7 +772,6 @@ export default function Nav() {
             </p>
           </div>
 
-          {/* <div className="image w-[570px] h-[504px] rounded-2xl bg-slate-400 hidden lg:block mb-[44px]"></div> */}
           <PictureView
             customStyle={'hidden lg:block '}
             customStylePic={
@@ -788,12 +786,9 @@ export default function Nav() {
       <div className="px-[24px] py-[56px] lg:px-[135px] lg:py-[96px] flex flex-col items-center">
         <div className="flex flex-col lg:flex-row-reverse gap-[84px]">
           <div className="Detail">
-            {/* <div className="image h-[674px] rounded-2xl bg-slate-400 block lg:hidden mb-[44px]"></div> */}
             <PictureView
               customStyle={'block lg:hidden  mb-[44px]'}
-              customStylePic={
-                'max-w-[570px] min-w-[370px] max-h-[504px] min-h-[300px] mb-[44px]'
-              }
+              customStylePic={' min-h-[300px] mb-[44px] h-full'}
               firstImage={require('../picture/activity3.png')}
               secondImage={require('../picture/activity4.png')}
             />
@@ -809,7 +804,6 @@ export default function Nav() {
             </p>
           </div>
 
-          {/* <div className="image w-[570px] h-[504px] rounded-2xl bg-slate-400 hidden lg:block mb-[44px]"></div> */}
           <PictureView
             customStyle={'hidden lg:block '}
             customStylePic={
