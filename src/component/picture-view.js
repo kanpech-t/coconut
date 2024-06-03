@@ -29,34 +29,31 @@ export default function PictureView({
       >
         {currentImg === 1 ? (
           <ArrowRight
-            className="absolute size-9 right-0 "
+            className="absolute size-9 right-0 z-10 "
             onClick={() => {
               handleChangeImg('goNext')
             }}
           />
         ) : (
           <ArrowLeft
-            className="absolute left-0 size-9 cursor-pointer t"
+            className="absolute left-0 size-9 cursor-pointer z-10"
             onClick={() => {
               handleChangeImg('goBack')
             }}
           />
         )}
-        {currentImg === 1 ? (
-          <img
-            src={firstImage}
-            className=" w-full "
-            alt={`Slide 1`}
-            ref={img1}
-          />
-        ) : (
-          <img
-            src={secondImage}
-            className=" w-full "
-            alt={`Slide 2`}
-            ref={img2}
-          />
-        )}
+        <img
+          src={firstImage}
+          className={`${currentImg === 1 ? 'opacity-100' : 'opacity-0'} w-full `}
+          alt={`Slide 1`}
+          ref={img1}
+        />
+        <img
+          src={secondImage}
+          className={`${currentImg === 2 ? 'opacity-100' : 'opacity-0'} w-full absolute left-0`}
+          alt={`Slide 2`}
+          ref={img2}
+        />
       </div>
       <div className="flex mt-4 lg:mt-6 gap-3  justify-start lg:justify-center">
         <div
