@@ -748,25 +748,24 @@ export default function Nav() {
         className="px-[24px] py-[56px] lg:px-[135px] lg:py-[96px] flex flex-col items-center bg-[#EDEEEA] first-letter "
         ref={activities}
       >
-        <div className="flex flex-col lg:flex-row gap-[84px] lg:justify-between w-full">
+        <div className="flex flex-col lg:flex-row gap-[84px]  justify-center  lg:justify-between w-full">
           <div className="Detail">
             <h3 className="text-primary-green text-[28px] lg:text-[36px] font-semibold lg:font-bold  mb-[44px] lg:mb-[72px]">
               Activities
             </h3>
 
-            <PictureView
-              customStyle={'block lg:hidden  mb-[44px] '}
-              customStylePic={
-                'max-w-[570px]  max-h-[504px] min-h-[300px] mb-[44px]'
-              }
-              firstImage={require('../picture/activity1.png')}
-              secondImage={require('../picture/activity2.png')}
-            />
             <ImageSlide
-              images={['../picture/activity1.png', '../picture/activity2.png']}
+              images={[
+                require('../picture/activity1-1.png'),
+                require('../picture/activity1-2.png'),
+                require('../picture/activity1-3.png'),
+                require('../picture/activity1-4.png'),
+                require('../picture/activity1-5.jpg'),
+                require('../picture/activity1-6.jpg'),
+              ]}
               customStyle={'block lg:hidden  mb-[44px] '}
               customStylePic={
-                'max-w-[570px]  max-h-[504px] min-h-[300px] mb-[44px]'
+                'rounded-2xl max-w-[570px]  max-h-[504px] min-h-[300px] mb-[44px]'
               }
             />
 
@@ -775,47 +774,52 @@ export default function Nav() {
             </p>
           </div>
 
-          <PictureView
-            customStyle={'hidden lg:block '}
-            customStylePic={
-              'max-w-[570px] min-w-[370px] max-h-[504px] min-h-[300px]  mb-[44px]'
-            }
-            firstImage={require('../picture/activity1.png')}
-            secondImage={require('../picture/activity2.png')}
-          />
-
           <ImageSlide
-            images={['../picture/activity1.png', '../picture/activity2.png']}
+            images={[
+              require('../picture/activity1-1.png'),
+              require('../picture/activity1-2.png'),
+              require('../picture/activity1-3.png'),
+              require('../picture/activity1-4.png'),
+              require('../picture/activity1-5.jpg'),
+              require('../picture/activity1-6.jpg'),
+            ]}
             customStyle={'hidden lg:block '}
             customStylePic={
-              'max-w-[570px] min-w-[370px] max-h-[504px] min-h-[300px]  mb-[44px]'
+              'rounded-2xl max-w-[570px] min-w-[370px] max-h-[504px] min-h-[300px]  mb-[44px]'
             }
           />
         </div>
       </div>
 
       <div className="px-[24px] py-[56px] lg:px-[135px] lg:py-[96px] flex flex-col items-center">
-        <div className="flex flex-col lg:flex-row-reverse gap-[84px] lg:justify-between w-full">
+        <div className="flex flex-col lg:flex-row-reverse gap-[84px] justify-center lg:justify-between w-full">
           <div className="Detail">
-            <PictureView
-              customStyle={'block lg:hidden  mb-[44px]'}
-              customStylePic={' min-h-[300px] mb-[44px] h-full'}
-              firstImage={require('../picture/activity3.png')}
-              secondImage={require('../picture/activity4.png')}
+            <ImageSlide
+              images={[
+                require('../picture/activity2-1.jpg'),
+                require('../picture/activity2-2.jpg'),
+                require('../picture/activity2-3.jpg'),
+              ]}
+              customStyle={'block lg:hidden'}
+              customStylePic={
+                'rounded-2xl max-w-[570px] min-w-[370px] max-h-[504px] min-h-[300px]  mb-[44px]'
+              }
             />
 
             <p className="text-[#394127] font-[600] text-[28px]">
               Our coconut farm
             </p>
           </div>
-
-          <PictureView
-            customStyle={'hidden lg:block '}
+          <ImageSlide
+            images={[
+              require('../picture/activity2-1.jpg'),
+              require('../picture/activity2-2.jpg'),
+              require('../picture/activity2-3.jpg'),
+            ]}
+            customStyle={'hidden lg:block'}
             customStylePic={
-              'max-w-[570px] min-w-[370px] max-h-[504px] min-h-[300px] mb-[44px]'
+              'rounded-2xl max-w-[570px] min-w-[370px] max-h-[504px] min-h-[300px]  mb-[44px]'
             }
-            firstImage={require('../picture/activity3.png')}
-            secondImage={require('../picture/activity4.png')}
           />
         </div>
       </div>
