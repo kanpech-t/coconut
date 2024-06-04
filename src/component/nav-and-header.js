@@ -339,7 +339,7 @@ export default function Nav() {
               cultivated in the lush western region of Thailand— an area
               well-known for its ideal coconut growing environment.
             </p>
-            <p className="text-[18px] font-medium mb-[24px]  text-[#1C2014]">
+            <p className="text-[16px] lg:text-[18px] font-medium mb-[24px]  text-[#1C2014]">
               Benefiting from this prime location, our coconuts exhibit a
               delightful blend of sweetness, creaminess, and richness, capturing
               the distinctive flavor profile of original Thai aromatic coconuts.
@@ -347,7 +347,7 @@ export default function Nav() {
               of seasonal fruits and vegetables sourced directly from Thailand's
               fertile landscapes.
             </p>
-            <p className="text-[18px] font-medium  text-[#1C2014] ">
+            <p className="text-[16px] lg:text-[18px] font-medium  text-[#1C2014] ">
               Moreover, we tailor our services to individual customer
               preferences by offering customized orders of Thai seasonal
               produce.
