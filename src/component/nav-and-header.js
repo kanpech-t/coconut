@@ -374,7 +374,7 @@ export default function Nav() {
               className="mt-[44px] w-full  bg-slate-400 rounded-2xl  lg:hidden"
               alt={`our service`}
             />
-            <div className="mt-[44px] lg:mt-0 lg:max-w-[calc(66%-32px)] text-[18px] font-medium">
+            <div className="mt-[44px] lg:mt-0 lg:max-w-[calc(66%-32px)] text-[16px] lg:text-[18px] font-medium">
               delivering directly from our production facility to destinations
               worldwide. Through our meticulous quality control measures, we
               ensure that our customers consistently receive top-notch products
