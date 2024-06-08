@@ -1,11 +1,11 @@
 import logo from './logo.svg'
 import './App.css'
-import Nav from './component/nav-and-header'
+import MainContent from './component/main-content'
 
 function App() {
   return (
     <div className="h-[100vdh]">
-      <Nav />
+      <MainContent />
     </div>
   )
 }
