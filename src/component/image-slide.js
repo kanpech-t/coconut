@@ -38,7 +38,7 @@ export default function ImageSlide({ images, customStyle, customStylePic }) {
           />
         ))}
       </div>
-      <div className="flex mt-4 lg:mt-6 gap-3 justify-start lg:justify-center">
+      <div className="flex mt-4 xl:mt-6 gap-3 justify-start xl:justify-center">
         {images.map((_, index) => (
           <div
             key={index}

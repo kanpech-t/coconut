@@ -55,7 +55,7 @@ export default function PictureView({
           ref={img2}
         />
       </div>
-      <div className="flex mt-4 lg:mt-6 gap-3  justify-start lg:justify-center">
+      <div className="flex mt-4 xl:mt-6 gap-3  justify-start xl:justify-center">
         <div
           className={`${currentImg === 1 ? 'bg-[#6B7949]' : 'bg-[#DADCD6]'} size-4 rounded-full`}
         ></div>
