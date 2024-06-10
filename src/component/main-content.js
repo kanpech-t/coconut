@@ -217,13 +217,15 @@ export default function MainContent() {
             </div>
           ))}
         </Slide>
-        <div className="self-center justify-self-center absolute w-[465px] h-[176px] text-center xl:bottom-[205px] xl:left-[135px] z-[100] text-[#F0F4E4]">
+        <div className="self-center justify-self-center absolute w-[400px] xl:w-[820px] h-[176px] text-center xl:bottom-[205px] xl:left-[135px] z-[100] text-[#F0F4E4]">
           <p className="text-[24px] xl:text-[40px] sacramento-regular ">
             Taste of nature
           </p>
-          <p className="text-[36px] xl:text-[64px] font-bold">Coconut Milk</p>
+          <p className="text-[36px] xl:text-[64px] font-bold">
+            Aromatic Young Coconuts
+          </p>
           <p className="text-[20px] xl:text-[26px] font-semibold">
-            for industrial
+            and Thai fruit
           </p>
         </div>
       </div>
@@ -838,7 +840,7 @@ export default function MainContent() {
             SIRIPHON THAI FRUIT CO., LTD
           </div>
           <div className="text-white text-[14px]">
-            Coconut milk for industrial
+            Aromatic Young Coconuts and Thai fruit
           </div>
         </div>
 
