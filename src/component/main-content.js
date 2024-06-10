@@ -552,7 +552,7 @@ export default function MainContent() {
 
               <div className="flex flex-col justify-between xl:flex-row">
                 <div className="heading w-[147px] text-[#475131] font-[600] text-[18px] mb-[20px]">
-                  MAQ
+                  MOQ
                 </div>
                 <div className="detail  w-[266px] text-[16px]">1x20'RF</div>
                 <div className=" w-[266px]"></div>
@@ -653,7 +653,7 @@ export default function MainContent() {
 
               <div className="flex flex-col justify-between xl:flex-row">
                 <div className="heading w-[147px] text-[#475131] font-[600] text-[18px] mb-[20px]">
-                  MAQ
+                  MOQ
                 </div>
                 <div className="detail  w-[266px] text-[16px]">1x20'RF</div>
                 <div className=" w-[266px]"></div>
