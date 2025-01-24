@@ -780,7 +780,7 @@ export default function MainContent() {
         id="activities"
       >
         <div className="flex flex-col xl:flex-row gap-[84px]  items-center justify-center  xl:justify-between w-full">
-          <div className="Detail">
+          <div className="Detail w-full">
             <h3 className="text-primary-green text-[28px] xl:text-[36px] font-semibold xl:font-bold  mb-[44px] xl:mb-[72px]">
               Activities
             </h3>
@@ -795,9 +795,7 @@ export default function MainContent() {
                 require('../picture/activity1-6.jpg'),
               ]}
               customStyle={'block xl:hidden  mb-[44px] '}
-              customStylePic={
-                'rounded-2xl max-w-[570px]  max-h-[504px] min-h-[300px] mb-[44px]'
-              }
+              customStylePic={'rounded-2xl  mb-[44px]'}
             />
 
             <p className="text-[#394127] font-[600] text-[28px]">
@@ -814,9 +812,9 @@ export default function MainContent() {
               require('../picture/activity1-5.jpg'),
               require('../picture/activity1-6.jpg'),
             ]}
-            customStyle={'hidden xl:block '}
+            customStyle={'hidden xl:block  w-full xl:w-f'}
             customStylePic={
-              'rounded-2xl max-w-[570px] min-w-[370px] max-h-[504px] min-h-[300px]  mb-[44px]'
+              'rounded-2xl  min-w-[370px]  min-h-[300px]  mb-[44px]'
             }
           />
         </div>
@@ -824,17 +822,15 @@ export default function MainContent() {
 
       <div className="px-[24px] py-[56px] xl:px-[135px] xl:py-[96px] flex flex-col items-center">
         <div className="flex flex-col xl:flex-row-reverse gap-[84px]  items-center justify-center xl:justify-between w-full">
-          <div className="Detail">
+          <div className="Detail w-full">
             <ImageSlide
               images={[
                 require('../picture/activity2-1.jpg'),
                 require('../picture/activity2-2.jpg'),
                 require('../picture/activity2-3.jpg'),
               ]}
-              customStyle={'block xl:hidden'}
-              customStylePic={
-                'rounded-2xl max-w-[570px]  max-h-[504px] min-h-[300px]  mb-[44px]'
-              }
+              customStyle={'block xl:hidden w-full xl:w-fit'}
+              customStylePic={'rounded-2xl   mb-[44px]'}
             />
 
             <p className="text-[#394127] font-[600] text-[28px]">

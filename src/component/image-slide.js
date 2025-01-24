@@ -19,7 +19,7 @@ export default function ImageSlide({ images, customStyle, customStylePic }) {
   return (
     <div className={customStyle}>
       <div
-        className={`w-[580px] rounded-2xl flex items-center overflow-hidden relative ${customStylePic}`}
+        className={`w-full xl:w-[580px] rounded-2xl flex items-center overflow-hidden relative ${customStylePic}`}
       >
         <ArrowLeft
           className="absolute left-0 size-9 cursor-pointer z-10"
