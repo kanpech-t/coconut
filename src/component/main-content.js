@@ -110,7 +110,7 @@ export default function MainContent() {
     if (hash) {
       const target = document.getElementById(hash)
       if (target) {
-        target.scrollIntoView({ behavior: 'smooth' })
+        target.scrollIntoView()
       }
     }
   }, [])
