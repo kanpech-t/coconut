@@ -30,6 +30,7 @@ import '../index.css'
 import PictureView from './picture-view'
 
 import ImageSlide from './image-slide'
+import { AspectRatio } from './aspect-ratio'
 
 export default function MainContent() {
   // ====================== useState ======================
@@ -332,7 +333,7 @@ export default function MainContent() {
           {/* img */}
           <PictureView
             customStyle={'hidden xl:block '}
-            customStylePic={'max-w-[440px] min-w-[440px] h-[674px] '}
+            customStylePic={'max-w-[440px] min-w-[440px]  '}
             firstImage={require('../picture/our-product-img-1.jpg')}
             secondImage={require('../picture/our-product-img-2.jpg')}
           />
@@ -342,8 +343,8 @@ export default function MainContent() {
             </h1>
             <div className="flex justify-center">
               <PictureView
-                customStyle={'xl:hidden mb-[44px]'}
-                customStylePic={'max-h-[500px]  max-w-[400px]'}
+                customStyle={'xl:hidden mb-[44px] w-full max-w-[400px] '}
+                customStylePic={'max-h-[500px]  max-w-[400px] '}
                 firstImage={require('../picture/our-product-img-1.jpg')}
                 secondImage={require('../picture/our-product-img-2.jpg')}
               />
@@ -368,26 +369,33 @@ export default function MainContent() {
             </p>
           </div>
         </div>
-
-        <img
-          src={require('../picture/our-service.png')}
-          className="mt-[72px] w-full   bg-slate-400 rounded-2xl hidden xl:block"
-          alt={`our service`}
-        />
+        <div className="hidden xl:block mt-[72px]">
+          <AspectRatio ratio={15 / 10}>
+            <img
+              src={require('../picture/our-service.png')}
+              className=" w-full   bg-slate-400 rounded-2xl "
+              alt={`our service`}
+            />
+          </AspectRatio>
+        </div>
 
         <div className="mt-[56px]">
           <span className=" text-[20px] font-semibold text-[#8EA262]">
             our service
           </span>
           <div className="flex mt-4 xl:gap-[64px] xl:flex-row flex-col">
-            <div className="xl:text-[36px] text-[28px] font-semibold xl:font-bold xl:max-w-[calc(33%-32px)]">
-              We provide global shipping services,
+            <div className="xl:text-[36px] text-[28px] font-semibold xl:font-bold xl:max-w-[calc(33%-32px)] mb-11">
+              We provide global shipping services
             </div>
-            <img
-              src={require('../picture/our-service.png')}
-              className="mt-[44px] w-full  bg-slate-400 rounded-2xl  xl:hidden"
-              alt={`our service`}
-            />
+            <div className="xl:hidden">
+              <AspectRatio ratio={15 / 10}>
+                <img
+                  src={require('../picture/our-service.png')}
+                  className=" w-full  bg-slate-400 rounded-2xl  xl:hidden h-full object-contain"
+                  alt={`our service`}
+                />
+              </AspectRatio>
+            </div>
             <div className="mt-[44px] xl:mt-0 xl:max-w-[calc(66%-32px)] text-[16px] xl:text-[18px] font-medium">
               delivering directly from our production facility to destinations
               worldwide. Through our meticulous quality control measures, we
@@ -476,7 +484,7 @@ export default function MainContent() {
             Shaped Coconut
           </h2>
           <div className="flex gap-[48px] xl:flex-row flex-col">
-            <div className="images flex xl:flex-col flex-row gap-[16px] overflow-x-scroll xl:overflow-x-hidden xl:min-w-[377px]">
+            <div className="images flex xl:flex-col flex-row gap-[16px] overflow-x-scroll xl:overflow-x-hidden xl:min-w-[377px] xl:h-fit h-[274px]">
               <div className="flex flex-col justify-center items-center gap-[16px]">
                 <img
                   alt="diamond"
@@ -591,7 +599,7 @@ export default function MainContent() {
             Polished Coconut
           </h2>
           <div className="flex gap-[48px] xl:flex-row-reverse flex-col">
-            <div className="images flex xl:flex-col flex-row gap-[16px] overflow-x-scroll  xl:overflow-x-hidden xl:min-w-[377px]">
+            <div className="images flex xl:flex-col flex-row gap-[16px] overflow-x-scroll  xl:overflow-x-hidden h-[274px] xl:h-fit xl:min-w-[377px]">
               <div className="flex flex-col justify-center items-center gap-[16px]">
                 <img
                   alt="cupcake"
@@ -698,13 +706,15 @@ export default function MainContent() {
           Service Providing
         </h2>
         <div className="flex flex-col xl:items-start items-center gap-[54px] xl:gap-[30px] xl:flex-row xl:justify-evenly">
-          <div className="xl:w-[359px] flex flex-col items-center">
-            <div className="flex justify-center items-center rounded-[16px] xl:w-[300px] overflow-hidden">
-              <img
-                alt="truck"
-                src={require('../picture/service-truck.png')}
-                className="rounded-[16px]"
-              />
+          <div className="xl:w-[359px] flex flex-col items-center w-full">
+            <div className="flex justify-center items-center rounded-[16px] w-full xl:w-[300px] xl:h-[276px] overflow-hidden">
+              <AspectRatio ratio={1 / 1}>
+                <img
+                  alt="truck"
+                  src={require('../picture/service-truck.png')}
+                  className="rounded-[16px] object-cover w-full h-full"
+                />
+              </AspectRatio>
             </div>
 
             <div className="text-white font-[600] xl:text-[18px] flex self-start gap-[24px] px-[24px] xl:py-[26px] pt-[24px] pb-[16px]">
@@ -718,12 +728,14 @@ export default function MainContent() {
           </div>
 
           <div className="xl:w-[359px] flex flex-col items-center">
-            <div className="flex justify-center items-center rounded-[16px] xl:w-[300px] overflow-hidden">
-              <img
-                alt="ship"
-                src={require('../picture/service-ship.png')}
-                className="rounded-[16px] "
-              />
+            <div className="flex justify-center items-center rounded-[16px] xl:w-[300px] overflow-hidden w-full">
+              <AspectRatio ratio={1 / 1}>
+                <img
+                  alt="ship"
+                  src={require('../picture/service-ship.png')}
+                  className="rounded-[16px] object-cover w-full h-full"
+                />
+              </AspectRatio>
             </div>
 
             <div className="text-white font-[600] xl:text-[18px] flex self-start gap-[24px] px-[24px] xl:py-[26px] pt-[24px] pb-[16px]">
@@ -738,12 +750,14 @@ export default function MainContent() {
           </div>
 
           <div className="xl:w-[359px] flex flex-col items-center">
-            <div className="flex justify-center items-center rounded-[16px] xl:w-[300px] overflow-hidden">
-              <img
-                alt="custom"
-                src={require('../picture/service-custom.png')}
-                className="rounded-[16px]"
-              />
+            <div className="flex justify-center items-center rounded-[16px] xl:w-[300px] overflow-hidden w-full">
+              <AspectRatio ratio={1 / 1}>
+                <img
+                  alt="custom"
+                  src={require('../picture/service-custom.png')}
+                  className=" rounded-[16px] object-cover w-full h-full"
+                />
+              </AspectRatio>
             </div>
 
             <div className="text-white font-[600] xl:text-[18px] flex self-start gap-[24px] px-[24px] xl:py-[26px] pt-[24px] pb-[16px]">

@@ -2,6 +2,7 @@ import { useRef, useState } from 'react'
 
 import { ReactComponent as ArrowLeft } from '../svg/arrow-left.svg'
 import { ReactComponent as ArrowRight } from '../svg/arrow-right.svg'
+import { AspectRatio } from './aspect-ratio'
 
 export default function PictureView({
   firstImage,
@@ -42,18 +43,20 @@ export default function PictureView({
             }}
           />
         )}
-        <img
-          src={firstImage}
-          className={`${currentImg === 1 ? 'opacity-100' : 'opacity-0'} w-full  transition-opacity duration-500 `}
-          alt={`Slide 1`}
-          ref={img1}
-        />
-        <img
-          src={secondImage}
-          className={`${currentImg === 2 ? 'opacity-100' : 'opacity-0'} w-full absolute left-0  transition-opacity duration-500 `}
-          alt={`Slide 2`}
-          ref={img2}
-        />
+        <AspectRatio ratio={10 / 15}>
+          <img
+            src={firstImage}
+            className={`${currentImg === 1 ? 'opacity-100' : 'opacity-0'} w-full  transition-opacity duration-500 `}
+            alt={`Slide 1`}
+            ref={img1}
+          />
+          <img
+            src={secondImage}
+            className={`${currentImg === 2 ? 'opacity-100' : 'opacity-0'} w-full absolute top-0 left-0  transition-opacity duration-500 `}
+            alt={`Slide 2`}
+            ref={img2}
+          />
+        </AspectRatio>
       </div>
       <div className="flex mt-4 xl:mt-6 gap-3  justify-start xl:justify-center">
         <div
