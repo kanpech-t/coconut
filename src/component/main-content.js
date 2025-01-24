@@ -103,6 +103,15 @@ export default function MainContent() {
       setDisplayMobileNav(false)
     }, 250)
   }
+  useEffect(() => {
+    const hash = window.location.hash.substring(1)
+    if (hash) {
+      const target = document.getElementById(hash)
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' })
+      }
+    }
+  }, [])
 
   const scrollToItem = (item) => {
     switch (item) {
