@@ -315,6 +315,7 @@ export default function MainContent() {
       <div
         className=" py-[56px] xl:py-[96px] px-[24px] xl:px-[135px] overflow-hidden relative"
         ref={aboutUs}
+        id="about-us"
       >
         <div className="flex gap-[72px] items-center">
           {/* img */}
@@ -452,6 +453,7 @@ export default function MainContent() {
       <div
         className="py-[56px] xl:py-[96px] px-[24px] xl:px-[135px] overflow-hidden relative"
         ref={catalog}
+        id="catalog"
       >
         <h1 className="text-primary-green text-[36px] xl:text-[64px] text-center font-semibold xl:font-bold mb-9">
           Our Coconut
@@ -679,6 +681,7 @@ export default function MainContent() {
       <div
         className="py-[56px] px-[24px] xl:py-[96px] xl:px-[135px] bg-primary-green text-center"
         ref={serviceProviding}
+        id="service-providing"
       >
         <h2 className="text-white text-[28px] font-[600] xl:text-[36px] xl:font-[700] mb-[72px]">
           Service Providing
@@ -749,6 +752,7 @@ export default function MainContent() {
       <div
         className="px-[24px] py-[56px] xl:px-[135px] xl:py-[96px] flex flex-col items-center bg-[#EDEEEA] first-letter "
         ref={activities}
+        id="activities"
       >
         <div className="flex flex-col xl:flex-row gap-[84px]  items-center justify-center  xl:justify-between w-full">
           <div className="Detail">
@@ -830,6 +834,7 @@ export default function MainContent() {
       <div
         className="px-[24px] py-[56px] xl:px-[135px] xl:py-[96px] flex justify-between flex-col xl:flex-row bg-[#475131]"
         ref={contact}
+        id="contact"
       >
         <div className="mb-[48px]">
           <Logo
