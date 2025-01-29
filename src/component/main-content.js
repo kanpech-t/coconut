@@ -110,6 +110,11 @@ export default function MainContent() {
     const hash = window.location.hash.substring(1)
     if (hash) {
       const target = document.getElementById(hash)
+      if (hash === 'contact') {
+        window.gtag('event', 'conversion', {
+          send_to: 'AW-16741257683/Tlf1CMe6y5YaENOj7a4-',
+        })
+      }
       if (target) {
         target.scrollIntoView()
       }
