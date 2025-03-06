@@ -1,7 +1,8 @@
-version: "3"
+version: "3.8"
+
 services:
   react-app:
-    image: my-react-app
+    build: .
     container_name: react-app
     restart: always
     expose:
