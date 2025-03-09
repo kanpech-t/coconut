@@ -798,8 +798,8 @@ export default function MainContent() {
               images={[
                 require('../picture/activity1-1.png'),
                 require('../picture/activity1-2.png'),
-                require('../picture/activity1-3.png'),
-                require('../picture/activity1-4.png'),
+                require('../picture/activity1-3.jpeg'),
+                require('../picture/activity1-4.jpeg'),
                 require('../picture/activity1-5.jpg'),
                 require('../picture/activity1-6.jpg'),
               ]}
@@ -818,8 +818,8 @@ export default function MainContent() {
             images={[
               require('../picture/activity1-1.png'),
               require('../picture/activity1-2.png'),
-              require('../picture/activity1-3.png'),
-              require('../picture/activity1-4.png'),
+              require('../picture/activity1-3.jpeg'),
+              require('../picture/activity1-4.jpeg'),
               require('../picture/activity1-5.jpg'),
               require('../picture/activity1-6.jpg'),
             ]}
