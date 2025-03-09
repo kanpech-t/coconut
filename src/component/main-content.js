@@ -230,6 +230,7 @@ export default function MainContent() {
                 src={image}
                 className="h-[100dvh] w-full object-cover"
                 alt={`Slide ${index + 1}`}
+                loading="lazy"
               />
             </div>
           ))}
@@ -384,6 +385,7 @@ export default function MainContent() {
               src={require('../picture/our-service.png')}
               className=" w-full   bg-slate-400 rounded-2xl "
               alt={`our service`}
+              loading="lazy"
             />
           </AspectRatio>
         </div>
@@ -402,6 +404,7 @@ export default function MainContent() {
                   src={require('../picture/our-service.png')}
                   className=" w-full  bg-slate-400 rounded-2xl  xl:hidden h-full object-contain"
                   alt={`our service`}
+                  loading="lazy"
                 />
               </AspectRatio>
             </div>
@@ -499,6 +502,7 @@ export default function MainContent() {
                   alt="diamond"
                   src={diamond}
                   className="rounded-2xl xl:min-w-[250px] max-w-[377px] max-h-[234px] xl:max-h-[310px]"
+                  loading="lazy"
                 />
 
                 <div className="text-[#475131] text-[16px] xl:text-[18px] font-[600]">
@@ -513,6 +517,7 @@ export default function MainContent() {
                       alt="greenCutDiamond"
                       src={require('../picture/greenCut.png')}
                       className="rounded-2xl xl:w-[172.5px] max-w-[377px] max-h-[234px] xl:max-h-[310px]"
+                      loading="lazy"
                     />
                     <div className="text-[#475131] text-[16px] xl:text-[18px] font-[600]">
                       Green Cut Diamond
@@ -525,6 +530,7 @@ export default function MainContent() {
                     alt="partialGreen"
                     src={partialGreen}
                     className="rounded-2xl xl:w-[230px] max-w-[377px] max-h-[234px] xl:max-h-[310px]"
+                    loading="lazy"
                   />
                   <div className="text-[#475131] text-[16px] xl:text-[18px] font-[600]">
                     Partial Green Diamond
@@ -614,6 +620,7 @@ export default function MainContent() {
                   alt="cupcake"
                   src={cupcake}
                   className="rounded-2xl xl:min-w-[250px] max-w-[377px] max-h-[234px] xl:max-h-[310px]"
+                  loading="lazy"
                 />
                 <div className="text-[#475131] text-[16px] xl:text-[18px] font-[600]">
                   Cupcake
@@ -626,6 +633,7 @@ export default function MainContent() {
                     alt="ball"
                     src={ball}
                     className="rounded-2xl xl:min-w-[250px] max-w-[377px] max-h-[234px] xl:max-h-[310px]"
+                    loading="lazy"
                   />
                   <div className="text-[#475131] text-[16px] xl:text-[18px] font-[600]">
                     Ball
@@ -722,6 +730,7 @@ export default function MainContent() {
                   alt="truck"
                   src={require('../picture/service-truck.png')}
                   className="rounded-[16px] object-cover w-full h-full"
+                  loading="lazy"
                 />
               </AspectRatio>
             </div>
@@ -743,6 +752,7 @@ export default function MainContent() {
                   alt="ship"
                   src={require('../picture/service-ship.png')}
                   className="rounded-[16px] object-cover w-full h-full"
+                  loading="lazy"
                 />
               </AspectRatio>
             </div>
@@ -765,6 +775,7 @@ export default function MainContent() {
                   alt="custom"
                   src={require('../picture/service-custom.png')}
                   className=" rounded-[16px] object-cover w-full h-full"
+                  loading="lazy"
                 />
               </AspectRatio>
             </div>

@@ -38,6 +38,7 @@ export default function ImageSlide({ images, customStyle, customStylePic }) {
                 className={`w-full transition-opacity duration-500 h-full object-cover ${currentImgIndex === index ? 'opacity-100 relative' : 'opacity-0 absolute'}`}
                 alt={`Slide ${index + 1}`}
                 style={{ left: 0 }}
+                loading="lazy"
               />
             ))}
           </AspectRatio>

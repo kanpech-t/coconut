@@ -49,12 +49,14 @@ export default function PictureView({
             className={`${currentImg === 1 ? 'opacity-100' : 'opacity-0'} w-full  transition-opacity duration-500 `}
             alt={`Slide 1`}
             ref={img1}
+            loading="lazy"
           />
           <img
             src={secondImage}
             className={`${currentImg === 2 ? 'opacity-100' : 'opacity-0'} w-full absolute top-0 left-0  transition-opacity duration-500 `}
             alt={`Slide 2`}
             ref={img2}
+            loading="lazy"
           />
         </AspectRatio>
       </div>
