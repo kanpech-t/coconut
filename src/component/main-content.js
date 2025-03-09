@@ -545,15 +545,14 @@ export default function MainContent() {
                   Packaging
                 </div>
                 <div className="flex flex-col ">
-                  <div className="subheading w-[266px] text-[#6B7949] font-[600] text-[16px] mb-[16px] xl:mg-[24px]">
+                  <div className="subheading w-[295px] text-[#6B7949] font-[600] text-[16px] mb-[16px] xl:mg-[24px]">
                     Size dependent
                   </div>
                   <div className="detail text-[16px]">
                     <div className="mb-[8px]">9 Units / Carton</div>
-                    <div className="mb-[8px]">12 Units / Carton</div>
                   </div>
                 </div>
-                <div className=" w-[266px]"></div>
+                <div className=" w-[295px]"></div>
               </div>
 
               <hr className="border-[#B5B9AD] border-t" />
@@ -562,25 +561,12 @@ export default function MainContent() {
                 <div className="heading w-[147px] text-[#475131] font-[600] text-[18px] mb-[20px]">
                   Container Load
                 </div>
-                <div className="flex flex-col mb-[20px]">
-                  <div className="subheading w-[266px] text-[#6B7949] font-[600] text-[16px] mb-[16px] xl:mg-[24px]">
-                    Pallet
-                  </div>
-                  <div className="detail text-[16px]">
-                    <div className="mb-[8px]">990 Carton / 20'RF</div>
-                    <div className="mb-[8px]">
-                      1980 Carton / 40'RF (High Cube)
-                    </div>
-                  </div>
-                </div>
+
                 <div className="flex flex-col">
-                  <div className="subheading w-[266px] text-[#6B7949] font-[600] text-[16px] mb-[16px] xl:mg-[24px]">
-                    No Pallet
-                  </div>
                   <div className="detail text-[16px]">
-                    <div className="mb-[8px]">1025 Carton / 20'RF</div>
+                    <div className="mb-[8px]">970 - 1020 Carton / 20'RF</div>
                     <div className="mb-[8px]">
-                      2052 Carton / 40'RF (High Cube)
+                      2000 - 2052 Carton / 40'RF (High Cube)
                     </div>
                   </div>
                 </div>
@@ -592,8 +578,8 @@ export default function MainContent() {
                 <div className="heading w-[147px] text-[#475131] font-[600] text-[18px] mb-[20px]">
                   MOQ
                 </div>
-                <div className="detail  w-[266px] text-[16px]">1x20'RF</div>
-                <div className=" w-[266px]"></div>
+                <div className="detail  w-[295px] text-[16px]">1x20'RF</div>
+                <div className=" w-[295px]"></div>
               </div>
 
               <hr className="border-[#B5B9AD] border-t" />
@@ -602,8 +588,8 @@ export default function MainContent() {
                 <div className="heading w-[147px] text-[#475131] font-[600] text-[18px] mb-[20px]">
                   Payment Term
                 </div>
-                <div className="detail  w-[266px] text-[16px]">L/C or T/T</div>
-                <div className="w-[266px]"></div>
+                <div className="detail  w-[295px] text-[16px]">L/C or T/T</div>
+                <div className="w-[295px]"></div>
               </div>
             </div>
           </div>
@@ -648,15 +634,14 @@ export default function MainContent() {
                   Packaging
                 </div>
                 <div className="flex flex-col ">
-                  <div className="subheading w-[266px] text-[#6B7949] font-[600] text-[16px] mb-[16px] xl:mg-[24px]">
+                  <div className="subheading w-[295px] text-[#6B7949] font-[600] text-[16px] mb-[16px] xl:mg-[24px]">
                     Size dependent
                   </div>
                   <div className="detail text-[16px]">
                     <div className="mb-[8px]">32 Units / Carton</div>
-                    <div className="mb-[8px]">40 Units / Carton</div>
                   </div>
                 </div>
-                <div className=" w-[266px]"></div>
+                <div className=" w-[295px]"></div>
               </div>
 
               <hr className="border-[#B5B9AD] border-t" />
@@ -665,28 +650,16 @@ export default function MainContent() {
                 <div className="heading w-[147px] text-[#475131] font-[600] text-[18px] mb-[20px]">
                   Container Load
                 </div>
-                <div className="flex flex-col mb-[20px]">
-                  <div className="subheading w-[266px] text-[#6B7949] font-[600] text-[16px] mb-[16px] xl:mg-[24px]">
-                    Pallet
-                  </div>
-                  <div className="detail text-[16px]">
-                    <div className="mb-[8px]">990 Carton / 20'RF</div>
-                    <div className="mb-[8px]">
-                      1980 Carton / 40'RF (High Cube)
-                    </div>
-                  </div>
-                </div>
+
                 <div className="flex flex-col">
-                  <div className="subheading w-[266px] text-[#6B7949] font-[600] text-[16px] mb-[16px] xl:mg-[24px]">
-                    No Pallet
-                  </div>
                   <div className="detail text-[16px]">
-                    <div className="mb-[8px]">1025 Carton / 20'RF</div>
+                    <div className="mb-[8px]">970 - 1020 Carton / 20'RF</div>
                     <div className="mb-[8px]">
-                      2052 Carton / 40'RF (High Cube)
+                      2000 - 2052 Carton / 40'RF (High Cube)
                     </div>
                   </div>
                 </div>
+                <div className="w-[295px]" />
               </div>
 
               <hr className="border-[#B5B9AD] border-t" />
@@ -695,8 +668,8 @@ export default function MainContent() {
                 <div className="heading w-[147px] text-[#475131] font-[600] text-[18px] mb-[20px]">
                   MOQ
                 </div>
-                <div className="detail  w-[266px] text-[16px]">1x20'RF</div>
-                <div className=" w-[266px]"></div>
+                <div className="detail  w-[295px] text-[16px]">1x20'RF</div>
+                <div className=" w-[295px]"></div>
               </div>
 
               <hr className="border-[#B5B9AD] border-t" />
@@ -705,8 +678,8 @@ export default function MainContent() {
                 <div className="heading w-[147px] text-[#475131] font-[600] text-[18px] mb-[20px]">
                   Payment Term
                 </div>
-                <div className="detail  w-[266px] text-[16px]">L/C or T/T</div>
-                <div className="w-[266px]"></div>
+                <div className="detail  w-[295px] text-[16px]">L/C or T/T</div>
+                <div className="w-[295px]"></div>
               </div>
             </div>
           </div>
