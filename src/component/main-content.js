@@ -570,6 +570,7 @@ export default function MainContent() {
                     </div>
                   </div>
                 </div>
+                <div className="w-[295px]" />
               </div>
 
               <hr className="border-[#B5B9AD] border-t" />
