@@ -328,7 +328,12 @@ export default function MainContent() {
             <span className="text-[14px] text-white">coconut</span>
           )}
         </div> */}
-          <div className="flex justify-center items-center h-[93px] w-12 border-t border-white bg-[#6B7949]  cursor-pointer">
+          <div
+            className="flex justify-center items-center h-[93px] w-12 border-t border-white bg-[#6B7949]  cursor-pointer"
+            onClick={() => {
+              scrollToItem('Catalog')
+            }}
+          >
             <Catalog />
           </div>
         </div>
