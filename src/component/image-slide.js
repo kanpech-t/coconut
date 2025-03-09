@@ -18,30 +18,32 @@ export default function ImageSlide({ images, customStyle, customStylePic }) {
 
   return (
     <div className={customStyle}>
-      <div
-        className={`w-full xl:w-[580px] rounded-2xl flex items-center overflow-hidden relative ${customStylePic}`}
-      >
-        <ArrowLeft
-          className="absolute left-0 size-9 cursor-pointer z-10"
-          onClick={() => handleChangeImg('prev')}
-        />
-        <ArrowRight
-          className="absolute right-0 size-9 cursor-pointer z-10"
-          onClick={() => handleChangeImg('next')}
-        />
-        <AspectRatio ratio={1 / 1}>
-          {images.map((image, index) => (
-            <img
-              key={index}
-              src={image}
-              className={`w-full transition-opacity duration-500 h-full object-cover ${currentImgIndex === index ? 'opacity-100 relative' : 'opacity-0 absolute'}`}
-              alt={`Slide ${index + 1}`}
-              style={{ left: 0 }}
-            />
-          ))}
-        </AspectRatio>
+      <div className="flex flex-col items-center w-full">
+        <div
+          className={`w-full xl:w-[580px] rounded-2xl  self-center flex items-center overflow-hidden relative ${customStylePic}`}
+        >
+          <ArrowLeft
+            className="absolute left-0 size-9 cursor-pointer z-10"
+            onClick={() => handleChangeImg('prev')}
+          />
+          <ArrowRight
+            className="absolute right-0 size-9 cursor-pointer z-10"
+            onClick={() => handleChangeImg('next')}
+          />
+          <AspectRatio ratio={1 / 1}>
+            {images.map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                className={`w-full transition-opacity duration-500 h-full object-cover ${currentImgIndex === index ? 'opacity-100 relative' : 'opacity-0 absolute'}`}
+                alt={`Slide ${index + 1}`}
+                style={{ left: 0 }}
+              />
+            ))}
+          </AspectRatio>
+        </div>
       </div>
-      <div className="flex mt-4 xl:mt-6 gap-3 justify-start xl:justify-center">
+      <div className="flex mt-4 xl:mt-6 gap-3 justify-start xl:justify-center w-full">
         {images.map((_, index) => (
           <div
             key={index}

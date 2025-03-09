@@ -262,7 +262,9 @@ export default function MainContent() {
           >
             <Phone />
             {currentSidebarHover === 'phone' && (
-              <span className="text-[14px] text-white">+66 91 710 5668</span>
+              <span className="text-[14px] text-white">
+                <a href="tel:+66917105668">+66 91 710 5668</a>
+              </span>
             )}
           </div>
           <div
@@ -277,7 +279,9 @@ export default function MainContent() {
             <Email />
             {currentSidebarHover === 'email' && (
               <span className="text-[14px] text-white">
-                srpthaifruit@gmail.com
+                <a href="mailto:srpthaifruit@gmail.com">
+                  srpthaifruit@gmail.com
+                </a>
               </span>
             )}
           </div>
@@ -386,7 +390,7 @@ export default function MainContent() {
 
         <div className="mt-[56px]">
           <span className=" text-[20px] font-semibold text-[#8EA262]">
-            our service
+            Our service
           </span>
           <div className="flex mt-4 xl:gap-[64px] xl:flex-row flex-col">
             <div className="xl:text-[36px] text-[28px] font-semibold xl:font-bold xl:max-w-[calc(33%-32px)] mb-11">
@@ -767,7 +771,7 @@ export default function MainContent() {
 
             <div className="text-white font-[600] xl:text-[18px] flex self-start gap-[24px] px-[24px] xl:py-[26px] pt-[24px] pb-[16px]">
               <Custom className="size-[24px]" />
-              <span>Freight Shipping</span>
+              <span>Custom Clearance</span>
             </div>
             <p className="text-white px-6 self-start text-start text-[18px]">
               We provide expert assistance with export customs formalities,
@@ -799,7 +803,9 @@ export default function MainContent() {
                 require('../picture/activity1-5.jpg'),
                 require('../picture/activity1-6.jpg'),
               ]}
-              customStyle={'block xl:hidden  mb-[44px] '}
+              customStyle={
+                'block xl:hidden  mb-[44px] flex flex-col items-center'
+              }
               customStylePic={'rounded-2xl  mb-[44px]'}
             />
 
@@ -817,7 +823,7 @@ export default function MainContent() {
               require('../picture/activity1-5.jpg'),
               require('../picture/activity1-6.jpg'),
             ]}
-            customStyle={'hidden xl:block  w-full xl:w-f'}
+            customStyle={'hidden xl:block  w-full flex flex-col items-center'}
             customStylePic={
               'rounded-2xl  min-w-[370px]  min-h-[300px]  mb-[44px]'
             }
@@ -881,7 +887,7 @@ export default function MainContent() {
               Contact Us
             </div>
             <div className="flex flex-col">
-              <div className="flex flex-row mx-[16px] mb-[32px]">
+              <div className="flex flex-row  mb-[32px]">
                 <div className="w-[220px] mr-[24px]">
                   <Address className="cursor-pointer size-[16px] xl:size-[24px] mb-[24px]" />
                   <div className="text-white text-[14px] xl:text-[16px] font-[600]">
@@ -897,21 +903,21 @@ export default function MainContent() {
                     Phone
                   </div>
                   <div className="text-white text-[10px] xl:text-[14px]">
-                    +66 91 710 5668
+                    <a href="tel:+66917105668">+66 91 710 5668</a>
                   </div>
                   <div className="text-white text-[10px] xl:text-[14px]">
-                    +66 88 230 4451
+                    <a href="tel:+66882304451">+66 88 230 4451</a>
                   </div>
                 </div>
               </div>
-              <div className="flex flex-row mx-[16px]">
+              <div className="flex flex-row ">
                 <div className="w-[220px] mr-[24px]">
                   <Whatsapp className="cursor-pointer size-[16px] xl:size-[24px] mb-[24px]" />
                   <div className="text-white text-[14px] xl:text-[16px] font-[600]">
                     Whatsapp
                   </div>
                   <div className="text-white text-[10px] xl:text-[14px]">
-                    +66 91 710 5668
+                    <a href="https://wa.me/66917105668">+66 91 710 5668</a>
                   </div>
                 </div>
                 <div className="w-[220px] mr-[24px]">
@@ -920,7 +926,9 @@ export default function MainContent() {
                     Email
                   </div>
                   <div className="text-white text-[10px] xl:text-[14px]">
-                    srpthaifruit@gmail.com
+                    <a href="mailto:srpthaifruit@gmail.com">
+                      srpthaifruit@gmail.com
+                    </a>
                   </div>
                 </div>
               </div>
@@ -933,7 +941,7 @@ export default function MainContent() {
             </div>
             <ul>
               <li
-                className="text-white py-[16px] px-[32px] cursor-pointer"
+                className="text-white pb-[16px] cursor-pointer"
                 onClick={() => {
                   scrollToItem('About us')
                 }}
@@ -941,7 +949,7 @@ export default function MainContent() {
                 About us
               </li>
               <li
-                className="text-white py-[16px] px-[32px] cursor-pointer"
+                className="text-white py-[16px]  cursor-pointer"
                 onClick={() => {
                   scrollToItem('Catalog')
                 }}
@@ -949,7 +957,7 @@ export default function MainContent() {
                 Catalog
               </li>
               <li
-                className="text-white py-[16px] px-[32px] cursor-pointer"
+                className="text-white py-[16px]  cursor-pointer"
                 onClick={() => {
                   scrollToItem('Service Providing')
                 }}
@@ -957,7 +965,7 @@ export default function MainContent() {
                 Service Providing
               </li>
               <li
-                className="text-white py-[16px] px-[32px] cursor-pointer"
+                className="text-white py-[16px]  cursor-pointer"
                 onClick={() => {
                   scrollToItem('Activities')
                 }}
@@ -965,7 +973,7 @@ export default function MainContent() {
                 Activities
               </li>
               <li
-                className="text-white py-[16px] px-[32px] cursor-pointer"
+                className="text-white py-[16px]  cursor-pointer"
                 onClick={() => {
                   scrollToItem('Contact')
                 }}
