@@ -7,10 +7,7 @@ import { ReactComponent as Varietires } from '../svg/varietires.svg'
 import { ReactComponent as Quality } from '../svg/quality.svg'
 import { ReactComponent as Bars } from '../svg/bars.svg'
 import { ReactComponent as Email } from '../svg/email.svg'
-import { ReactComponent as Facebook } from '../svg/facebook.svg'
-import { ReactComponent as Youtube } from '../svg/youtube.svg'
 import { ReactComponent as Phone } from '../svg/phone.svg'
-import { ReactComponent as Cart } from '../svg/cart.svg'
 import { ReactComponent as Catalog } from '../svg/Catalog.svg'
 import { ReactComponent as Close } from '../svg/close.svg'
 import { ReactComponent as Address } from '../svg/address.svg'
@@ -703,7 +700,7 @@ export default function MainContent() {
         </h2>
         <div className="flex flex-col xl:items-start items-center gap-[54px] xl:gap-[30px] xl:flex-row xl:justify-evenly">
           <div className="xl:w-[359px] flex flex-col items-center w-full">
-            <div className="flex justify-center items-center rounded-[16px] w-full xl:w-[300px] xl:h-[276px] overflow-hidden">
+            <div className="flex justify-center items-center rounded-[16px] w-full xl:w-[300px]  overflow-hidden">
               <AspectRatio ratio={1 / 1}>
                 <img
                   alt="truck"
