@@ -28,6 +28,14 @@ import PictureView from './picture-view'
 
 import ImageSlide from './image-slide'
 import { AspectRatio } from './aspect-ratio'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from './carousel'
+import CustomCarosel from './custom-carosel'
 
 export default function MainContent() {
   // ====================== useState ======================
@@ -139,6 +147,20 @@ export default function MainContent() {
         window.scrollTo({ top: 0, behavior: 'smooth' })
     }
   }
+
+  const [api, setApi] = useState()
+  const [current, setCurrent] = useState(0)
+
+  useEffect(() => {
+    if (!api) {
+      return
+    }
+    setCurrent(api.selectedScrollSnap() + 1)
+
+    api.on('select', () => {
+      setCurrent(api.selectedScrollSnap() + 1)
+    })
+  }, [api])
 
   useEffect(() => {
     const onScroll = () => {
@@ -343,23 +365,81 @@ export default function MainContent() {
       >
         <div className="flex gap-[72px] items-center">
           {/* img */}
-          <PictureView
+          {/* <PictureView
             customStyle={'hidden xl:block '}
             customStylePic={'max-w-[440px] min-w-[440px]  '}
             firstImage={require('../picture/our-product-img-1.jpg')}
             secondImage={require('../picture/our-product-img-2.jpg')}
-          />
+          /> */}
+          <div className="hidden xl:block ">
+            <CustomCarosel
+              className={'w-[440px]'}
+              totalImage={2}
+              content={
+                <>
+                  <CarouselItem>
+                    <AspectRatio ratio={10 / 15}>
+                      <img
+                        src={require('../picture/our-product-img-1.jpg')}
+                        className="w-full h-full object-cover"
+                        alt="our product"
+                      />
+                    </AspectRatio>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <AspectRatio ratio={10 / 15}>
+                      <img
+                        src={require('../picture/our-product-img-2.jpg')}
+                        className="w-full h-full object-cover"
+                        alt="our product"
+                      />
+                    </AspectRatio>
+                  </CarouselItem>
+                </>
+              }
+            />
+          </div>
           <div className=" py-[10px] flex flex-col">
             <h1 className="text-primary-green text-[28px] xl:text-[36px] font-semibold xl:font-bold mb-9">
               Our Product
             </h1>
             <div className="flex justify-center">
-              <PictureView
-                customStyle={'xl:hidden mb-[44px] w-full max-w-[400px] '}
-                customStylePic={'max-h-[500px]  max-w-[400px] '}
-                firstImage={require('../picture/our-product-img-1.jpg')}
-                secondImage={require('../picture/our-product-img-2.jpg')}
-              />
+              <div className="xl:hidden w-full max-w-[400px] mb-[44px]">
+                <CustomCarosel
+                  totalImage={2}
+                  className={'w-full max-w-[400px] '}
+                  content={
+                    <>
+                      <CarouselItem>
+                        <AspectRatio ratio={10 / 15}>
+                          <img
+                            src={require('../picture/our-product-img-1.jpg')}
+                            className="w-full h-full object-cover"
+                            alt="our product"
+                          />
+                        </AspectRatio>
+                      </CarouselItem>
+                      <CarouselItem>
+                        <AspectRatio ratio={10 / 15}>
+                          <img
+                            src={require('../picture/our-product-img-2.jpg')}
+                            className="w-full h-full object-cover"
+                            alt="our product"
+                          />
+                        </AspectRatio>
+                      </CarouselItem>
+                    </>
+                  }
+                />
+              </div>
+              {/* <div className="xl:hidden">
+                <PictureView
+                  customStyle={'xl:hidden mb-[44px] w-full max-w-[400px] '}
+                  customStylePic={'max-h-[500px]  max-w-[400px] '}
+                  firstImage={require('../picture/our-product-img-1.jpg')}
+                  secondImage={require('../picture/our-product-img-2.jpg')}
+                />
+              </div> */}
             </div>
             <p className="text-[16px] xl:text-[18px] font-medium mb-[24px] text-[#1C2014]">
               Our key products consist of authentic aromatic young coconuts,
@@ -780,8 +860,35 @@ export default function MainContent() {
             <h3 className="text-primary-green text-[28px] xl:text-[36px] font-semibold xl:font-bold  mb-[44px] xl:mb-[72px]">
               Activities
             </h3>
-
-            <ImageSlide
+            <div className="block xl:hidden  mb-[44px]  flex-col items-center">
+              <CustomCarosel
+                className={'w-full '}
+                totalImage={6}
+                content={
+                  <>
+                    {[
+                      require('../picture/activity1-1.png'),
+                      require('../picture/activity1-2.png'),
+                      require('../picture/activity1-3.jpeg'),
+                      require('../picture/activity1-4.jpeg'),
+                      require('../picture/activity1-5.jpg'),
+                      require('../picture/activity1-6.jpg'),
+                    ].map((item, index) => (
+                      <CarouselItem key={index}>
+                        <AspectRatio ratio={1 / 1}>
+                          <img
+                            src={item}
+                            className="object-cover w-full h-full"
+                            alt="activity"
+                          />
+                        </AspectRatio>
+                      </CarouselItem>
+                    ))}
+                  </>
+                }
+              />
+            </div>
+            {/* <ImageSlide
               images={[
                 require('../picture/activity1-1.png'),
                 require('../picture/activity1-2.png'),
@@ -794,14 +901,14 @@ export default function MainContent() {
                 'block xl:hidden  mb-[44px] flex flex-col items-center'
               }
               customStylePic={'rounded-2xl  mb-[44px]'}
-            />
+            /> */}
 
             <p className="text-[#394127] font-[600] text-[28px]">
               Our facility
             </p>
           </div>
 
-          <ImageSlide
+          {/* <ImageSlide
             images={[
               require('../picture/activity1-1.png'),
               require('../picture/activity1-2.png'),
@@ -814,14 +921,43 @@ export default function MainContent() {
             customStylePic={
               'rounded-2xl  min-w-[370px]  min-h-[300px]  mb-[44px]'
             }
-          />
+          /> */}
+
+          <div className="hidden xl:block  mb-[44px] w-full flex-col items-center ">
+            <CustomCarosel
+              className={'w-full h-full max-w-[580px] '}
+              totalImage={6}
+              content={
+                <>
+                  {[
+                    require('../picture/activity1-1.png'),
+                    require('../picture/activity1-2.png'),
+                    require('../picture/activity1-3.jpeg'),
+                    require('../picture/activity1-4.jpeg'),
+                    require('../picture/activity1-5.jpg'),
+                    require('../picture/activity1-6.jpg'),
+                  ].map((item, index) => (
+                    <CarouselItem key={index}>
+                      <AspectRatio ratio={1 / 1}>
+                        <img
+                          src={item}
+                          className="object-cover w-full h-full   "
+                          alt="activity"
+                        />
+                      </AspectRatio>
+                    </CarouselItem>
+                  ))}
+                </>
+              }
+            />
+          </div>
         </div>
       </div>
 
       <div className="px-[24px] py-[56px] xl:px-[135px] xl:py-[96px] flex flex-col items-center">
         <div className="flex flex-col xl:flex-row-reverse gap-[84px]  items-center justify-center xl:justify-between w-full">
           <div className="Detail w-full">
-            <ImageSlide
+            {/* <ImageSlide
               images={[
                 require('../picture/activity2-1.jpg'),
                 require('../picture/activity2-2.jpg'),
@@ -829,13 +965,39 @@ export default function MainContent() {
               ]}
               customStyle={'block xl:hidden w-full xl:w-fit'}
               customStylePic={'rounded-2xl   mb-[44px]'}
-            />
+            /> */}
+
+            <div className="block xl:hidden  mb-[44px]  flex-col items-center">
+              <CustomCarosel
+                className={'w-full '}
+                totalImage={3}
+                content={
+                  <>
+                    {[
+                      require('../picture/activity2-1.jpg'),
+                      require('../picture/activity2-2.jpg'),
+                      require('../picture/activity2-3.jpg'),
+                    ].map((item, index) => (
+                      <CarouselItem key={index}>
+                        <AspectRatio ratio={1 / 1}>
+                          <img
+                            src={item}
+                            className="object-cover w-full h-full"
+                            alt="activity"
+                          />
+                        </AspectRatio>
+                      </CarouselItem>
+                    ))}
+                  </>
+                }
+              />
+            </div>
 
             <p className="text-[#394127] font-[600] text-[28px]">
               Our coconut farm
             </p>
           </div>
-          <ImageSlide
+          {/* <ImageSlide
             images={[
               require('../picture/activity2-1.jpg'),
               require('../picture/activity2-2.jpg'),
@@ -845,7 +1007,33 @@ export default function MainContent() {
             customStylePic={
               'rounded-2xl max-w-[570px] min-w-[370px] max-h-[504px] min-h-[300px]  mb-[44px]'
             }
-          />
+          /> */}
+
+          <div className="hidden xl:block  mb-[44px] w-full flex-col items-center ">
+            <CustomCarosel
+              className={'w-full h-full max-w-[580px] '}
+              totalImage={3}
+              content={
+                <>
+                  {[
+                    require('../picture/activity2-1.jpg'),
+                    require('../picture/activity2-2.jpg'),
+                    require('../picture/activity2-3.jpg'),
+                  ].map((item, index) => (
+                    <CarouselItem key={index}>
+                      <AspectRatio ratio={1 / 1}>
+                        <img
+                          src={item}
+                          className="object-cover w-full h-full   "
+                          alt="activity"
+                        />
+                      </AspectRatio>
+                    </CarouselItem>
+                  ))}
+                </>
+              }
+            />
+          </div>
         </div>
       </div>
 
