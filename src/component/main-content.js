@@ -409,9 +409,9 @@ export default function MainContent() {
             />
           </div>
           <div className=" py-[10px] flex flex-col">
-            <h1 className="text-primary-green text-[28px] xl:text-[36px] font-semibold xl:font-bold mb-9">
+            <h2 className="text-primary-green text-[28px] xl:text-[36px] font-semibold xl:font-bold mb-9">
               Our Product
-            </h1>
+            </h2>
             <div className="flex justify-center">
               <div className="xl:hidden w-full max-w-[400px] mb-[44px]">
                 <CustomCarosel
@@ -577,9 +577,9 @@ export default function MainContent() {
         ref={catalog}
         id="catalog"
       >
-        <h1 className="text-primary-green text-[36px] xl:text-[64px] text-center font-semibold xl:font-bold mb-9">
+        <h2 className="text-primary-green text-[36px] xl:text-[64px] text-center font-semibold xl:font-bold mb-9">
           Our Coconut
-        </h1>
+        </h2>
 
         {/* Shaped Coconut Section */}
         <div className="mb-20">
@@ -1057,9 +1057,9 @@ export default function MainContent() {
             onClick={() => scrollToItem('')}
             className="cursor-pointer size-[44px] xl:size-[55px] mb-[32px]"
           />
-          <div className="text-white text-[16px] font-[600] mb-[8px]">
+          <h1 className="text-white text-[16px] font-[600] mb-[8px]">
             SIRIPHON THAI FRUIT CO., LTD
-          </div>
+          </h1>
           <div className="text-white text-[14px]">
             Aromatic Young Coconuts and Thai fruit
           </div>
