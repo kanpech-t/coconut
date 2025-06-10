@@ -8,6 +8,7 @@ import { ReactComponent as Quality } from '../svg/quality.svg'
 import { ReactComponent as Bars } from '../svg/bars.svg'
 import { ReactComponent as Email } from '../svg/email.svg'
 import { ReactComponent as Phone } from '../svg/phone.svg'
+import { ReactComponent as Youtube } from '../svg/youtube.svg'
 import { ReactComponent as Catalog } from '../svg/Catalog.svg'
 import { ReactComponent as Close } from '../svg/close.svg'
 import { ReactComponent as Address } from '../svg/address.svg'
@@ -319,20 +320,28 @@ export default function MainContent() {
             <span className="text-[14px] text-white">coconut</span>
           )}
         </div> */}
-          {/* <div
-          className={`${currentSidebarHover === 'youtube' ? 'px-[14px] h-[48px] bg-primary-green' : 'size-12 bg-[#6B7949]'} gap-4 flex items-center justify-center   border-t border-white`}
-          onMouseEnter={() => {
-            setCurrentSidebarHover('youtube')
-          }}
-          onMouseLeave={() => {
-            setCurrentSidebarHover('')
-          }}
-        >
-          <Youtube />
-          {currentSidebarHover === 'youtube' && (
-            <span className="text-[14px] text-white">coconut</span>
-          )}
-        </div> */}
+          <div
+            className={`${currentSidebarHover === 'youtube' ? 'px-[14px] w-[200px] h-[48px] bg-primary-green' : 'size-12 bg-[#6B7949]'} gap-4 flex items-center justify-center   border-t border-white`}
+            onMouseEnter={() => {
+              setCurrentSidebarHover('youtube')
+            }}
+            onMouseLeave={() => {
+              setCurrentSidebarHover('')
+            }}
+          >
+            <Youtube />
+            {currentSidebarHover === 'youtube' && (
+              <span className="text-[14px] text-white">
+                <a
+                  href="https://www.youtube.com/@FruitXportThailand"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  FruitXport Thailand
+                </a>
+              </span>
+            )}
+          </div>
           {/* <div
           className={`${currentSidebarHover === 'cart' ? 'px-[14px] h-[48px] bg-primary-green' : 'size-12 bg-[#6B7949]'} gap-4 flex items-center justify-center  border-t border-white `}
           onMouseEnter={() => {
@@ -1085,7 +1094,7 @@ export default function MainContent() {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-row ">
+              <div className="flex flex-row mb-[32px]">
                 <div className="w-[220px] mr-[24px]">
                   <Whatsapp className="cursor-pointer size-[16px] xl:size-[24px] mb-[24px]" />
                   <div className="text-white text-[14px] xl:text-[16px] font-[600]">
@@ -1103,6 +1112,19 @@ export default function MainContent() {
                   <div className="text-white text-[10px] xl:text-[14px]">
                     <a href="mailto:srpthaifruit@gmail.com">
                       srpthaifruit@gmail.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-row">
+                <div className="w-[220px] mr-[24px]">
+                  <Youtube className="cursor-pointer size-[16px] xl:size-[24px] mb-[24px]" />
+                  <div className="text-white text-[14px] xl:text-[16px] font-[600]">
+                    Youtube
+                  </div>
+                  <div className="text-white text-[10px] xl:text-[14px]">
+                    <a href="https://www.youtube.com/@FruitXportThailand">
+                      FruitXport Thailand
                     </a>
                   </div>
                 </div>
