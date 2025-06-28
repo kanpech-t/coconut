@@ -1,17 +1,17 @@
-version: "3.8"
+version: "3"
 services:
   react-app:
     build: .
     container_name: react-app
     restart: always
     ports:
-      - "8080:80"
-    networks:
-      - proxy-network
+      - "80:80"
+      - "443:443"
     volumes:
       - /etc/letsencrypt/live:/etc/letsencrypt/live
       - /etc/letsencrypt/archive:/etc/letsencrypt/archive
+    networks:
+      - app-network
 
 networks:
-  proxy-network:
-    external: true
+  app-network:
