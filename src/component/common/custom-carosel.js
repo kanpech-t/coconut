@@ -6,9 +6,9 @@ import {
   CarouselPrevious,
 } from './carousel'
 
-import { ReactComponent as ArrowLeft } from '../svg/arrow-left.svg'
-import { ReactComponent as ArrowRight } from '../svg/arrow-right.svg'
-import { cn } from '../util'
+import { ReactComponent as ArrowLeft } from '../../svg/arrow-left.svg'
+import { ReactComponent as ArrowRight } from '../../svg/arrow-right.svg'
+import { cn } from '../../util'
 
 export default function CustomCarosel({ className, content, totalImage }) {
   const [api, setApi] = useState()

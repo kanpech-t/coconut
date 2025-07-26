@@ -3,7 +3,7 @@ import MainContent from './component/main-content'
 
 function App() {
   return (
-    <div className="h-[100vdh]">
+    <div className="h-dvh">
       <MainContent />
     </div>
   )

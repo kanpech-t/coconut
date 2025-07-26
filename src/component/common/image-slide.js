@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { ReactComponent as ArrowLeft } from '../svg/arrow-left.svg'
-import { ReactComponent as ArrowRight } from '../svg/arrow-right.svg'
+import { ReactComponent as ArrowLeft } from '../../svg/arrow-left.svg'
+import { ReactComponent as ArrowRight } from '../../svg/arrow-right.svg'
 import { AspectRatio } from './aspect-ratio'
 
 export default function ImageSlide({ images, customStyle, customStylePic }) {

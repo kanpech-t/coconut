@@ -25,6 +25,9 @@ module.exports = {
         fadeRight: "fadeRight 0.3s linear", // Note the missing 's' in '0.3s'
         fadeRightIn: "fadeRightIn 0.3s linear",
       },
+      maxWidth: {
+        1088: "1088px",
+      },
     },
   },
   plugins: [],
