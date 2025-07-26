@@ -1,6 +1,6 @@
 import { AspectRatio } from '../common/aspect-ratio'
 
-export default function OurService() {
+export default function OurServiceSection() {
   return (
     <div
       className="relative py-[72px] px-6 flex justify-center"

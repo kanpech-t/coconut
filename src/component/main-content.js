@@ -17,11 +17,6 @@ import { ReactComponent as Truck } from '../svg/truck.svg'
 import { ReactComponent as Ship } from '../svg/ship.svg'
 import { ReactComponent as Custom } from '../svg/custom.svg'
 
-import diamond from '../picture/diamond.png'
-import partialGreen from '../picture/partialGreen.png'
-import cupcake from '../picture/cupcake.png'
-import ball from '../picture/ball.png'
-
 import { Slide } from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
 import '../index.css'
@@ -39,11 +34,12 @@ import {
 import CustomCarosel from './common/custom-carosel'
 import NavBar from './nav-bar'
 import HeroSection from './section/hero-section'
-import OurService from './section/our-service'
+import OurService from './section/our-service-section'
 import DeliverySection from './section/delivery-section'
 import OurProductSection from './section/our-product-section'
 import AboutUsSection from './section/about-us-section'
 import CompanyBackgroundSection from './section/company-background-section'
+import OurServiceSection from './section/our-service-section'
 
 export default function MainContent() {
   // ====================== useState ======================
@@ -64,20 +60,6 @@ export default function MainContent() {
   const contact = useRef(null)
 
   const mainContainer = useRef(null)
-
-  const navBar = [
-    'About us',
-    'Catalog',
-    'Service Providing',
-    'Activities',
-    'Contact',
-  ]
-
-  const slideImages = [
-    require('../picture/cover-img-1.jpg'),
-    require('../picture/cover-img-2.jpg'),
-    require('../picture/cover-img-3.jpg'),
-  ]
 
   useEffect(() => {
     const hash = window.location.hash.substring(1)
@@ -151,7 +133,7 @@ export default function MainContent() {
       <NavBar scrollToItem={scrollToItem} />
       <HeroSection />
       <AboutUsSection />
-      <OurService />
+      <OurServiceSection />
       <CompanyBackgroundSection />
       <DeliverySection />
       <OurProductSection />

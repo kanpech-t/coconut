@@ -6,13 +6,13 @@ export default function DeliverySection() {
     <div className="py-[72px] xl:py-[128px] px-6 bg-primary-green flex justify-center">
       <div className="max-w-3xl w-full xl:max-w-1088  text-center flex flex-col">
         <h2 className="font-semibold text-[28px] leading-[40px] text-[#E0EACA] text-balance">
-          We Have A Commitment <br className="hidden xl:block" />
+          We Have A Commitment <br />
           To Delivering
         </h2>
         <div className="flex-col flex xl:flex-row  gap-16 mt-[56px] xl:mt-16 items-center justify-center xl:w-[904px] xl:self-center xl:h-[136px]">
           <div className="flex flex-col gap-8 items-center text-start xl:flex-1 xl:flex-row">
             <Varietires className="size-16" />
-            <div className="flex flex-col items-center xl:items-start">
+            <div className="flex flex-col items-center xl:items-start gap-2">
               <h2 className="font-semibold text-[40px] leading-[52px] xl:font-bold xl:text-[36px] text-white">
                 Varieties
               </h2>
@@ -23,7 +23,7 @@ export default function DeliverySection() {
           </div>
           <div className="flex flex-col gap-8 items-center text-start xl:flex-1 xl:flex-row">
             <Quality className="size-16" />
-            <div className="flex flex-col items-center xl:items-start">
+            <div className="flex flex-col items-center xl:items-start gap-2">
               <h2 className="font-semibold text-[40px] leading-[52px] xl:font-bold xl:text-[36px] text-white">
                 Quality
               </h2>
