@@ -54,10 +54,10 @@ export default function CompanyBackgroundSection() {
           </AspectRatio>
         </div>
         <div className="flex flex-col">
-          <h2 className="text-[24px] font-bold leading-[32px] text-[#8EA262]">
+          <h2 className="text-[24px] font-bold leading-[32px] text-[#8EA262] poppins">
             Company Background
           </h2>
-          <span className="text-[28px] leading-[40px] font-semibold text-[#475131] mt-3 mb-[56px] xl:mb-16">
+          <span className="poppins text-[28px] leading-[40px] font-semibold text-[#475131] mt-3 mb-[56px] xl:mb-16">
             Siriphon Thai Fruit company is a leading exporter of fresh coconuts
             and Thai fruits worldwide.
           </span>

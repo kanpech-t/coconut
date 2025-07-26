@@ -21,7 +21,7 @@ export const AboutUsItem = ({ urlArray, title }) => {
 
   return (
     <div className="flex flex-col flex-1 flex-shrink-0">
-      <span className="text-[28px] leading-[40px] font-semibold text-[#8EA262]">
+      <span className="text-[28px] leading-[40px] font-semibold text-[#8EA262] poppins">
         {title}
       </span>
       <Carousel
@@ -91,7 +91,7 @@ export default function AboutUsSection() {
               '0px 16px 32px -4px rgba(12, 12, 13, 0.1), 0px 4px 4px -4px rgba(12, 12, 13, 0.05)',
           }}
         >
-          <h2 className="text-[40px] leading-[52px] font-semibold text-[#475131] self-center xl:hidden">
+          <h2 className="text-[40px] leading-[52px] font-semibold text-[#475131] self-center xl:hidden poppins">
             About Us
           </h2>
           <div className="flex flex-col gap-6 xl:w-[440px] flex-shrink-0">

@@ -5,7 +5,7 @@ export default function DeliverySection() {
   return (
     <div className="py-[72px] xl:py-[128px] px-6 bg-primary-green flex justify-center">
       <div className="max-w-3xl w-full xl:max-w-1088  text-center flex flex-col">
-        <h2 className="font-semibold text-[28px] leading-[40px] text-[#E0EACA] text-balance">
+        <h2 className="font-semibold text-[28px] leading-[40px] text-[#E0EACA] text-balance poppins">
           We Have A Commitment <br />
           To Delivering
         </h2>
@@ -13,7 +13,7 @@ export default function DeliverySection() {
           <div className="flex flex-col gap-8 items-center text-start xl:flex-1 xl:flex-row">
             <Varietires className="size-16" />
             <div className="flex flex-col items-center xl:items-start gap-2">
-              <h2 className="font-semibold text-[40px] leading-[52px] xl:font-bold xl:text-[36px] text-white">
+              <h2 className="font-semibold text-[40px] leading-[52px] xl:font-bold xl:text-[36px] text-white poppins">
                 Varieties
               </h2>
               <span className="text-[20px] leading-[28px] font-bold text-white">
@@ -24,7 +24,7 @@ export default function DeliverySection() {
           <div className="flex flex-col gap-8 items-center text-start xl:flex-1 xl:flex-row">
             <Quality className="size-16" />
             <div className="flex flex-col items-center xl:items-start gap-2">
-              <h2 className="font-semibold text-[40px] leading-[52px] xl:font-bold xl:text-[36px] text-white">
+              <h2 className="font-semibold text-[40px] leading-[52px] xl:font-bold xl:text-[36px] text-white poppins">
                 Quality
               </h2>
               <span className="text-[20px] leading-[28px] font-bold text-white">

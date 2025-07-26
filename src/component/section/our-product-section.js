@@ -102,13 +102,13 @@ export default function OurProductSection() {
   return (
     <div className="py-[72px] xl:py-[128px] px-6 bg-white flex justify-center">
       <div className="max-w-3xl w-full xl:max-w-1088  text-center flex flex-col">
-        <h2 className="font-semibold text-[40px] xl:text-[56px] xl:leading-[64px] leading-[52px] text-[#8EA262] text-balance">
+        <h2 className="font-semibold text-[40px] xl:text-[56px] xl:leading-[64px] leading-[52px] text-[#8EA262] text-balance poppins">
           Our Product
         </h2>
         <div className="flex flex-col gap-[126px] mt-4 xl:mt-5">
           {/* shaped coconut */}
           <div className=" flex flex-col gap-[56px] xl:gap-[80px]">
-            <h3 className="text-[28px] leading-[40px] xl:text-[40px] xl:leading-[52px] font-semibold text-[#475131]">
+            <h3 className="text-[28px] leading-[40px] xl:text-[40px] xl:leading-[52px] font-semibold text-[#475131] poppins">
               Shaped Coconut
             </h3>
             <div className="flex flex-col gap-[56px] xl:flex-row xl:gap-[48.3px]">
@@ -221,7 +221,7 @@ export default function OurProductSection() {
           </div>
           {/* polished coconut */}
           <div className="mt-4 flex flex-col gap-[56px]">
-            <h3 className="text-[28px] leading-[40px] xl:text-[40px] xl:leading-[52px] font-semibold text-[#475131]">
+            <h3 className="text-[28px] leading-[40px] xl:text-[40px] xl:leading-[52px] font-semibold text-[#475131] poppins">
               Polished Coconut
             </h3>
             <div className="flex flex-col gap-[56px] xl:flex-row xl:gap-[160px] xl:justify-center">
@@ -328,7 +328,7 @@ export default function OurProductSection() {
           </div>
           {/* OEM Canned Coconut Water */}
           <div className="mt-4 flex flex-col gap-[56px]">
-            <h3 className="text-[28px] leading-[40px] xl:text-[40px] xl:leading-[52px] font-semibold text-[#475131]">
+            <h3 className="text-[28px] leading-[40px] xl:text-[40px] xl:leading-[52px] font-semibold text-[#475131] poppins">
               OEM Canned <br className="xl:hidden" />
               Coconut Water
             </h3>

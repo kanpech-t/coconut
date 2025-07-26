@@ -19,13 +19,13 @@ export default function OurServiceSection() {
         }}
       >
         <div className="flex flex-col">
-          <h2 className="text-[24px] font-bold leading-[32px] text-[#8EA262]">
+          <h2 className="text-[24px] font-bold leading-[32px] text-[#8EA262] poppins">
             Our Service
           </h2>
-          <span className="text-[24px] leading-[40px] text-balance xl:leading-[40px] xl:text-[28px] text-[#475131] font-semibold mt-3">
+          <span className="poppins text-[24px] leading-[40px] text-balance xl:leading-[40px] xl:text-[28px] text-[#475131] font-semibold mt-3">
             We Provide Global Shipping Services,
           </span>
-          <span className="text-[18px] xl:text-[20px] leading-[24px] xl:leading-[28px] font-medium text-[#4D4D4D] mb-10 xl:mb-0 text-balance mt-6">
+          <span className=" text-[18px] xl:text-[20px] leading-[24px] xl:leading-[28px] font-medium text-[#4D4D4D] mb-10 xl:mb-0 text-balance mt-6">
             delivering directly from our production facility to destinations
             worldwide. Through our meticulous quality control measures, we
             ensure that our customers consistently receive top-notch products of
