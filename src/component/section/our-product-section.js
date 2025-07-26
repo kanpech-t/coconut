@@ -86,7 +86,7 @@ const Separator = () => {
   return <div className="h-[1px] w-full bg-[#B5B9AD]"></div>
 }
 
-export default function OurProductSection() {
+export default function OurProductSection({ catalog }) {
   const tinCanSize = [
     '250 ml',
     '330 ml',
@@ -100,7 +100,11 @@ export default function OurProductSection() {
   const unitPerCartons = ['24', '12', '24', '24', '12', '24', '24']
 
   return (
-    <div className="py-[72px] xl:py-[128px] px-6 bg-white flex justify-center">
+    <div
+      className="py-[72px] xl:py-[128px] px-6 bg-white flex justify-center"
+      ref={catalog}
+      id="catalog"
+    >
       <div className="max-w-3xl w-full xl:max-w-1088  text-center flex flex-col">
         <h2 className="font-semibold text-[40px] xl:text-[56px] xl:leading-[64px] leading-[52px] text-[#8EA262] text-balance poppins">
           Our Product

@@ -1,40 +1,25 @@
 import { useState, useRef, useEffect } from 'react'
 
 import { ReactComponent as Logo } from '../svg/logo.svg'
-import { ReactComponent as ArrowLeft } from '../svg/arrow-left.svg'
-import { ReactComponent as ArrowRight } from '../svg/arrow-right.svg'
-import { ReactComponent as Varietires } from '../svg/varietires.svg'
-import { ReactComponent as Quality } from '../svg/quality.svg'
-import { ReactComponent as Bars } from '../svg/bars.svg'
+
 import { ReactComponent as Email } from '../svg/email.svg'
 import { ReactComponent as Phone } from '../svg/phone.svg'
 import { ReactComponent as Youtube } from '../svg/youtube.svg'
 import { ReactComponent as Catalog } from '../svg/Catalog.svg'
-import { ReactComponent as Close } from '../svg/close.svg'
 import { ReactComponent as Address } from '../svg/address.svg'
 import { ReactComponent as Whatsapp } from '../svg/whatsapp.svg'
 import { ReactComponent as Truck } from '../svg/truck.svg'
 import { ReactComponent as Ship } from '../svg/ship.svg'
 import { ReactComponent as Custom } from '../svg/custom.svg'
 
-import { Slide } from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
 import '../index.css'
-import PictureView from './common/picture-view'
 
-import ImageSlide from './common/image-slide'
 import { AspectRatio } from './common/aspect-ratio'
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from './common/carousel'
+import { CarouselItem } from './common/carousel'
 import CustomCarosel from './common/custom-carosel'
 import NavBar from './nav-bar'
 import HeroSection from './section/hero-section'
-import OurService from './section/our-service-section'
 import DeliverySection from './section/delivery-section'
 import OurProductSection from './section/our-product-section'
 import AboutUsSection from './section/about-us-section'
@@ -43,7 +28,6 @@ import OurServiceSection from './section/our-service-section'
 
 export default function MainContent() {
   // ====================== useState ======================
-  const [currentBackGroundPage, setCurrentBackGroundPage] = useState(0)
 
   const [currentSidebarHover, setCurrentSidebarHover] = useState('')
 
@@ -94,20 +78,6 @@ export default function MainContent() {
     }
   }
 
-  const [api, setApi] = useState()
-  const [current, setCurrent] = useState(0)
-
-  useEffect(() => {
-    if (!api) {
-      return
-    }
-    setCurrent(api.selectedScrollSnap() + 1)
-
-    api.on('select', () => {
-      setCurrent(api.selectedScrollSnap() + 1)
-    })
-  }, [api])
-
   useEffect(() => {
     const onScroll = () => {
       if (
@@ -132,11 +102,11 @@ export default function MainContent() {
     >
       <NavBar scrollToItem={scrollToItem} />
       <HeroSection />
-      <AboutUsSection />
+      <AboutUsSection aboutUs={aboutUs} />
       <OurServiceSection />
       <CompanyBackgroundSection />
       <DeliverySection />
-      <OurProductSection />
+      <OurProductSection catalog={catalog} />
       {/* sidebar */}
       {displaySidebar && (
         <div

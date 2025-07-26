@@ -64,7 +64,7 @@ export const AboutUsItem = ({ urlArray, title }) => {
   )
 }
 
-export default function AboutUsSection() {
+export default function AboutUsSection({ aboutUs }) {
   const [carouselApi, setCarouselApi] = useState()
 
   const [current, setCurrent] = useState(0)
@@ -82,8 +82,11 @@ export default function AboutUsSection() {
 
   return (
     <>
-      {' '}
-      <div className="flex flex-col py-[100px] px-6 bg-[#F0F4E4] items-center relative">
+      <div
+        className="flex flex-col py-[100px] px-6 bg-[#F0F4E4] items-center relative"
+        ref={aboutUs}
+        id="about-us"
+      >
         <div
           className="p-[28px] xl:p-[56px] max-w-3xl xl:max-w-1088 bg-white/80 rounded-[16px] flex flex-col gap-6 xl:gap-16 xl:flex-row relative z-[2]"
           style={{
