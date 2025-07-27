@@ -16,9 +16,9 @@ export const Footer = ({ contact, scrollToItem }) => {
           <div className="flex flex-col gap-[32px]">
             <Logo
               onClick={() => scrollToItem('')}
-              className="cursor-pointer size-[44px] xl:size-[55px] mb-[32px]"
+              className="cursor-pointer size-[44px] xl:size-[55px]"
             />
-            <div className="flex flex-col gap-[8px]">
+            <div className="flex flex-col gap-[8px] w-[277px]">
               <h1 className="text-white text-[18px] font-bold mb-[8px]">
                 SIRIPHON THAI FRUIT CO., LTD
               </h1>
@@ -70,7 +70,7 @@ export const Footer = ({ contact, scrollToItem }) => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-[32px]">
+          <div className="flex flex-col gap-[32px] w-[225px]">
             <div className="text-[#DADCD6] text-[20px] font-bold">Explore</div>
             <ul>
               <li
