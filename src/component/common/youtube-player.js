@@ -23,7 +23,7 @@ const YouTubeShort = ({ videoId }) => {
       onMouseEnter={handlePlay}
       onMouseLeave={handlePause}
       onClick={handlePlay}
-      className="w-full max-w-[504px] h-[581px] xl:h-[869px] xl:mx-0 mx-auto"
+      className="w-full max-w-[504px] h-full xl:mx-0 mx-auto"
       style={{
         overflow: 'hidden',
         borderRadius: '12px',

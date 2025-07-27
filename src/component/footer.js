@@ -8,80 +8,73 @@ export const Footer = ({ contact, scrollToItem }) => {
   return (
     <>
       <div
-        className="px-[24px] py-[56px] xl:px-[135px] xl:py-[96px] flex justify-between flex-col xl:flex-row bg-[#475131]"
+        className="py-[72px] px-[24px] xl:p-[72px] bg-[#475131]"
         ref={contact}
         id="contact"
       >
-        <div className="mb-[48px]">
-          <Logo
-            onClick={() => scrollToItem('')}
-            className="cursor-pointer size-[44px] xl:size-[55px] mb-[32px]"
-          />
-          <h1 className="text-white text-[16px] font-bold mb-[8px]">
-            SIRIPHON THAI FRUIT CO., LTD
-          </h1>
-          <div className="text-[#DADCD6] text-[16px]">
-            Aromatic Young Coconuts and Thai fruit
+        <div className="xl:mx-auto flex flex-col xl:flex-row xl:justify-between gap-[72px] xl:gap-[81px] max-w-[768px] xl:max-w-[1088px]">
+          <div className="flex flex-col gap-[32px]">
+            <Logo
+              onClick={() => scrollToItem('')}
+              className="cursor-pointer size-[44px] xl:size-[55px] mb-[32px]"
+            />
+            <div className="flex flex-col gap-[8px]">
+              <h1 className="text-white text-[18px] font-bold mb-[8px]">
+                SIRIPHON THAI FRUIT CO., LTD
+              </h1>
+              <div className="text-[#DADCD6] text-[16px]">
+                Aromatic Young Coconuts and Thai fruit
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div className="flex flex-col xl:flex-row ">
-          <div className="mb-[48px]">
-            <div className="text-[#DADCD6] text-[20px] font-bold mb-[32px]">
+          <div className="flex flex-col gap-[32px]">
+            <div className="text-[#DADCD6] text-[20px] font-bold">
               Contact Us
             </div>
-            <div className="flex flex-col">
-              <div className="flex flex-row  mb-[32px]">
-                <div className="w-[220px] mr-[24px]">
-                  <Address className="cursor-pointer size-[16px] xl:size-[24px] mb-[24px]" />
-                  <div className="text-white text-[20px] font-bold">
-                    Address
-                  </div>
-                  <div className="text-white text-[16px] ">
-                    39 moo 1 Khlong Khon, Samut Songkhram 75000 THAILAND
-                  </div>
-                </div>
-                <div className="w-[220px] mr-[24px]">
-                  <Phone className="cursor-pointer size-[16px] xl:size-[24px] mb-[24px]" />
-                  <div className="text-white text-[20px] font-bold">Phone</div>
-                  <div className="text-white text-[16px]">
-                    <a href="tel:+66917105668">+66 91 710 5668</a>
-                  </div>
-                  <div className="text-white text-[16px]">
-                    <a href="tel:+66882304451">+66 88 230 4451</a>
-                  </div>
+            <div className="flex flex-col xl:grid xl:grid-cols-2 gap-[32px]">
+              <div className="w-[220px] mr-[24px]">
+                <Address className="cursor-pointer size-[16px] xl:size-[24px] mb-[24px]" />
+                <div className="text-white text-[20px] font-bold">Address</div>
+                <div className="text-white text-[16px] ">
+                  39 moo 1 Khlong Khon, Samut Songkhram 75000 THAILAND
                 </div>
               </div>
-              <div className="flex flex-row mb-[32px]">
-                <div className="w-[220px] mr-[24px]">
-                  <Whatsapp className="cursor-pointer size-[16px] xl:size-[24px] mb-[24px]" />
-                  <div className="text-white text-[20px] font-bold">
-                    Whatsapp
-                  </div>
-                  <div className="text-white text-[16px]">
-                    <a href="https://wa.me/66917105668">+66 91 710 5668</a>
-                  </div>
+              <div className="w-[220px] mr-[24px]">
+                <Phone className="cursor-pointer size-[16px] xl:size-[24px] mb-[24px]" />
+                <div className="text-white text-[20px] font-bold">Phone</div>
+                <div className="text-white text-[16px]">
+                  <a href="tel:+66917105668">+66 91 710 5668</a>
                 </div>
-                <div className="w-[220px] mr-[24px]">
-                  <Email className="cursor-pointer size-[16px] xl:size-[24px] mb-[24px]" />
-                  <div className="text-white text-[20px] font-bold">Email</div>
-                  <div className="text-white text-[16px]">
-                    <a href="mailto:srpthaifruit@gmail.com">
-                      srpthaifruit@gmail.com
-                    </a>
-                  </div>
+                <div className="text-white text-[16px]">
+                  <a href="tel:+66882304451">+66 88 230 4451</a>
+                </div>
+              </div>
+
+              <div className="w-[220px] mr-[24px]">
+                <Whatsapp className="cursor-pointer size-[16px] xl:size-[24px] mb-[24px]" />
+                <div className="text-white text-[20px] font-bold">Whatsapp</div>
+                <div className="text-white text-[16px]">
+                  <a href="https://wa.me/66917105668">+66 91 710 5668</a>
+                </div>
+              </div>
+              <div className="w-[220px] mr-[24px]">
+                <Email className="cursor-pointer size-[16px] xl:size-[24px] mb-[24px]" />
+                <div className="text-white text-[20px] font-bold">Email</div>
+                <div className="text-white text-[16px]">
+                  <a href="mailto:srpthaifruit@gmail.com">
+                    srpthaifruit@gmail.com
+                  </a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="mb-[48px]">
-            <div className="text-[#DADCD6] text-[20px] font-bold mb-[32px]">
-              Explore
-            </div>
+          <div className="flex flex-col gap-[32px]">
+            <div className="text-[#DADCD6] text-[20px] font-bold">Explore</div>
             <ul>
               <li
-                className="text-[20px] font-semibold text-white pb-[16px] cursor-pointer montserrat"
+                className="text-[20px] font-semibold text-white py-[16px] cursor-pointer Montserrat"
                 onClick={() => {
                   scrollToItem('About us')
                 }}
@@ -89,7 +82,7 @@ export const Footer = ({ contact, scrollToItem }) => {
                 ABOUT US
               </li>
               <li
-                className="text-[20px] font-semibold text-white py-[16px]  cursor-pointer montserrat"
+                className="text-[20px] font-semibold text-white py-[16px]  cursor-pointer Montserrat"
                 onClick={() => {
                   scrollToItem('Catalog')
                 }}
@@ -97,7 +90,7 @@ export const Footer = ({ contact, scrollToItem }) => {
                 CATALOG
               </li>
               <li
-                className="text-[20px] font-semibold text-white py-[16px]  cursor-pointer montserrat"
+                className="text-[20px] font-semibold text-white py-[16px]  cursor-pointer Montserrat"
                 onClick={() => {
                   scrollToItem('Service Providing')
                 }}
@@ -105,7 +98,7 @@ export const Footer = ({ contact, scrollToItem }) => {
                 SERVICE PROVIDING
               </li>
               <li
-                className="text-[20px] font-semibold text-white py-[16px]  cursor-pointer montserrat"
+                className="text-[20px] font-semibold text-white py-[16px]  cursor-pointer Montserrat"
                 onClick={() => {
                   scrollToItem('Activities')
                 }}
@@ -113,7 +106,7 @@ export const Footer = ({ contact, scrollToItem }) => {
                 ACTIVITIES
               </li>
               <li
-                className="text-[20px] font-semibold text-white py-[16px]  cursor-pointer montserrat"
+                className="text-[20px] font-semibold text-white py-[16px]  cursor-pointer Montserrat"
                 onClick={() => {
                   scrollToItem('Contact')
                 }}

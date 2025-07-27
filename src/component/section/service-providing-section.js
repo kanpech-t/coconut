@@ -38,35 +38,37 @@ export const ServiceProvidingSection = ({ serviceProviding }) => {
         ref={serviceProviding}
         id="service-providing"
       >
-        <h2 className="text-white text-[40px] xl:text-[56px] font-semibold mb-[56px] xl:mb-[110px] poppins xl:uppercase">
-          Service Providing
-        </h2>
-        <div className="flex flex-col xl:items-start items-center gap-[54px] xl:gap-[30px] xl:flex-row xl:justify-evenly">
-          {serviceProvidingList.map((serviceProviding) => (
-            <div className="xl:w-[359px] flex flex-col items-center w-full">
-              <div className="flex justify-center items-center rounded-[8px] w-full xl:w-[340px] max-w-[340px] max-h-[300px] overflow-hidden">
-                <AspectRatio ratio={1 / 1}>
-                  <img
-                    alt={serviceProviding.key}
-                    src={serviceProviding.image}
-                    className="rounded-[8px] object-cover w-full h-full"
-                    loading="lazy"
-                  />
-                </AspectRatio>
-              </div>
+        <div className="mx-auto max-w-[768px] xl:max-w-[1088px]">
+          <h2 className="text-white text-[40px] xl:text-[56px] font-semibold mb-[56px] xl:mb-[110px] poppins xl:uppercase">
+            Service Providing
+          </h2>
+          <div className="flex flex-col xl:items-start items-center gap-[54px] xl:gap-[30px] xl:flex-row xl:justify-evenly">
+            {serviceProvidingList.map((serviceProviding) => (
+              <div className="xl:w-[359px] flex flex-col items-center w-full">
+                <div className="flex justify-center items-center rounded-[8px] w-full xl:w-[340px] max-w-[340px] max-h-[300px] overflow-hidden">
+                  <AspectRatio ratio={1 / 1}>
+                    <img
+                      alt={serviceProviding.key}
+                      src={serviceProviding.image}
+                      className="rounded-[8px] object-cover w-full h-full"
+                      loading="lazy"
+                    />
+                  </AspectRatio>
+                </div>
 
-              <div className="flex flex-col mr-auto gap-2 pt-[24px] pb-[16px]">
-                {serviceProviding.icon}
-                <p className="text-white font-bold text-[20px]">
-                  {serviceProviding.title}
+                <div className="flex flex-col mr-auto gap-3 pb-[24px] pt-[36px]">
+                  {serviceProviding.icon}
+                  <p className="text-white font-bold text-[20px]">
+                    {serviceProviding.title}
+                  </p>
+                </div>
+
+                <p className="text-[#EDEEEA] font-[500] self-start text-start text-[18px]">
+                  {serviceProviding.description}
                 </p>
               </div>
-
-              <p className="text-[#EDEEEA] font-[500] self-start text-start text-[18px]">
-                {serviceProviding.description}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </>

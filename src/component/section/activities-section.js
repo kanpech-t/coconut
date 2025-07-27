@@ -5,7 +5,7 @@ export const ActivitiesSection = ({ activities }) => {
   return (
     <>
       <div
-        className="flex flex-col bg-white gap-[96px] py-[72px] px-[24px] xl:py-[128px] xl:px-[96px]"
+        className="flex flex-col bg-white gap-[56px] xl:gap-[96px] py-[72px] px-[24px] xl:py-[128px] mx-auto max-w-[768px] xl:max-w-[1088px]"
         ref={activities}
       >
         <span className="text-[40px] xl:text-[56px] leading-[80px] xl:leading-[92px] font-semibold text-[#8EA262] xl:mb-[28px] poppins xl:uppercase">
@@ -17,7 +17,7 @@ export const ActivitiesSection = ({ activities }) => {
             <YouTubeShort videoId={'AuZ-M1Knl6k'} />
           </div>
 
-          <div className="flex flex-1 flex-col gap-[24px] my-auto">
+          <div className="flex flex-1 flex-col xl:gap-[24px] my-auto">
             <div className="text-[#475131] text-[20px] text-center xl:text-[28px] font-bold xl:font-semibold poppins xl:capitalize">
               Discover more of our activities <br />
               and content on Youtube
@@ -49,7 +49,7 @@ export const ActivitiesSection = ({ activities }) => {
             />
           </div>
 
-          <div className="flex flex-1 flex-col m-auto gap-[24px]">
+          <div className="flex flex-1 flex-col m-auto gap-[16px] xl:gap-[24px]">
             <div className="text-[#475131] text-[28px] text-center xl:text-[40px] font-semibold poppins">
               Harvesting <br />
               Quality Coconuts
@@ -82,7 +82,7 @@ export const ActivitiesSection = ({ activities }) => {
               loading="lazy"
             />
           </div>
-          <div className="flex flex-1 flex-col m-auto gap-[24px]">
+          <div className="flex flex-1 flex-col m-auto gap-[16px] xl:gap-[24px]">
             <div className="text-[#475131] text-[28px] text-center xl:text-[40px] font-semibold poppins">
               Secure & Quality <br />
               Packing
@@ -105,12 +105,14 @@ export const ActivitiesSection = ({ activities }) => {
               loading="lazy"
             />
           </div>
-          <div className="flex flex-1 flex-col m-auto gap-[24px]">
-            <div className="text-[#475131] text-[28px] text-center xl:text-[40px] font-semibold poppins">
-              Quality Check On Every Pieces
-            </div>
-            <div className="text-[#8EA262] text-[20px] text-center xl:text-[28px] font-bold xl:font-semibold poppins xl:capitalize">
-              Ensuring perfection before packing
+          <div className="flex flex-1 flex-col m-auto gap-[24px] xl:gap-0">
+            <div className="flex flex-col m-auto gap-[16px] xl:gap-[20px]">
+              <div className="text-[#475131] text-[28px] text-center xl:text-[40px] font-semibold poppins">
+                Quality Check On Every Pieces
+              </div>
+              <div className="text-[#8EA262] text-[20px] text-center xl:text-[28px] font-bold xl:font-semibold poppins xl:capitalize">
+                Ensuring perfection before packing
+              </div>
             </div>
 
             <div className="hidden xl:flex xl:flex-row xl:gap-[80px] mt-[80px]">

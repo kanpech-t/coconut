@@ -26,7 +26,7 @@ export const CertificatesSection = () => {
     },
   ]
   return (
-    <div className="w-full flex flex-col xl:flex-row">
+    <div className="w-full flex flex-col xl:flex-row bg-[#EDEEEA]">
       <div className="hidden xl:block">
         <img
           src="/images/certificate-background.jpg"
@@ -35,12 +35,12 @@ export const CertificatesSection = () => {
           loading="lazy"
         />
       </div>
-      <div className="flex xl:flex-1 flex-col gap-[56px] xl:gap-[80px] bg-[#EDEEEA] py-[72px] xl:py-[128px]">
+      <div className="flex mx-auto xl:flex-1 flex-col py-[72px] xl:py-[128px] max-w-[768px] xl:max-w-[1088px]">
         <div className="flex flex-col mx-[24px] sm:mx-auto mb-[56px] xl:mb-[72px] max-w-[696px] text-center xl:text-start">
-          <span className="text-[40px] xl:text-[56px] leading-[80px] xl:leading-[92px] font-semibold text-[#8EA262] xl:mb-[28px] poppins xl:uppercase">
+          <span className="text-[40px] xl:text-[56px] leading-[52px] xl:leading-[64px] font-semibold text-[#8EA262] mb-[28px] poppins xl:uppercase">
             Certificates
           </span>
-          <span className="text-[18px] xl:text-[20px] font-bold text-[#4D4D4D]">
+          <span className="text-[18px] xl:text-[20px] leading-[24px] xl:leading-[28px] font-bold text-[#4D4D4D]">
             At Siriphon Thai Fruit Co.,Ltd.
             <br /> we work closely with trusted, certified manufacturers to
             ensure we export meets international standards for food safety and
