@@ -106,7 +106,7 @@ export default function OurProductSection({ catalog }) {
       id="catalog"
     >
       <div className="max-w-3xl w-full xl:max-w-1088  text-center flex flex-col">
-        <h2 className="font-semibold text-[40px] xl:text-[56px] xl:leading-[64px] leading-[52px] text-[#8EA262] text-balance poppins">
+        <h2 className="font-semibold text-[40px] xl:text-[56px] xl:leading-[64px] leading-[52px] text-[#8EA262] text-balance poppins xl:uppercase">
           Our Product
         </h2>
         <div className="flex flex-col gap-[126px] mt-4 xl:mt-5">
