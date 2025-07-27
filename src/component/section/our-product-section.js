@@ -39,7 +39,7 @@ export const OurProductItem = ({ urlArray, title }) => {
           ))}
         </CarouselContent>
       </Carousel>{' '}
-      <div className="flex gap-4 self-center">
+      {/* <div className="flex gap-4 self-center">
         <div
           className={`size-10 bg-[#475131] rounded-full flex justify-center items-center ${
             current === 1 ? 'bg-[#B5B9AD]' : 'bg-[#475131]'
@@ -56,7 +56,7 @@ export const OurProductItem = ({ urlArray, title }) => {
         >
           <ArrowRight />
         </div>
-      </div>
+      </div> */}
       <span className="text-[20px] leading-[28px] font-bold  text-[#475131]">
         {title}
       </span>
