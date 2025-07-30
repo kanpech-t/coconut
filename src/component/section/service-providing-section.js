@@ -56,7 +56,7 @@ export const ServiceProvidingSection = ({ serviceProviding }) => {
                   </AspectRatio>
                 </div>
 
-                <div className="flex flex-row xl:flex-col mr-auto gap-3 pb-[24px] pt-[36px]">
+                <div className="flex flex-row mr-auto gap-3 pb-[24px] pt-[36px]">
                   {serviceProviding.icon}
                   <p className="text-white font-bold text-[20px]">
                     {serviceProviding.title}
