@@ -83,7 +83,7 @@ export default function AboutUsSection({ aboutUs }) {
   return (
     <>
       <div
-        className="flex flex-col py-[100px] px-6 bg-[#F0F4E4] items-center relative"
+        className="flex flex-col py-[100px] xl:py-[83px] xl:px-[96px] px-6 bg-[#F0F4E4] items-center relative"
         ref={aboutUs}
         id="about-us"
       >
@@ -97,7 +97,7 @@ export default function AboutUsSection({ aboutUs }) {
           <h2 className="text-[40px] leading-[52px] font-semibold text-[#475131] self-center xl:hidden poppins">
             About Us
           </h2>
-          <div className="flex flex-col gap-6 xl:w-[440px] flex-shrink-0">
+          <div className="flex flex-col gap-6 xl:w-[50%] xl:max-w-[440px] flex-shrink-0">
             <Carousel
               className="rounded-[8px] overflow-hidden"
               setApi={setCarouselApi}

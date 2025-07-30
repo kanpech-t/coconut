@@ -8,6 +8,14 @@ export default function HeroSection() {
   ]
   return (
     <div className="h-[100dvh] overflow-hidden relative z-[15] flex flex-col justify-center xl:justify-start">
+      <div
+        className="absolute z-[2] size-full"
+        style={{
+          background:
+            'linear-gradient(230.09deg, rgba(0, 0, 0, 0) 53.66%, rgba(0, 0, 0, 0.2) 62.47%)',
+          boxShadow: 'inset 0px 16px 64px 64px rgba(0, 0, 0, 0.25)',
+        }}
+      />
       <Slide arrows={false} swipe={false}>
         {slideImages.map((image, index) => (
           <div key={index} className="each-slide">

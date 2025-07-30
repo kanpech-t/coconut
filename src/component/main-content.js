@@ -91,7 +91,7 @@ export default function MainContent() {
   return (
     <div
       id="main"
-      className="relative h-dvh overflow-y-auto"
+      className="relative h-dvh overflow-y-auto karla"
       ref={mainContainer}
     >
       <NavBar scrollToItem={scrollToItem} />

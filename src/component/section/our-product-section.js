@@ -380,8 +380,8 @@ export default function OurProductSection({ catalog }) {
             </div>
             <div className="flex flex-col gap-[56px] xl:flex-row">
               <div className="bg-[#EDEEEA] p-7 rounded-[16px] flex  gap-[23.5px] xl:flex-1 xl:px-[56px] xl:py-[52px]">
-                <div className="flex flex-col gap-3 text-start flex-1">
-                  <span className="text-[#475131] font-bold text-[18px] leading-[24px] h-[48px] sm:h-auto xl:text-[20px] xl:leading-[28px]">
+                <div className="flex flex-col gap-3 text-start  flex-grow-[3]">
+                  <span className="text-[#475131] font-bold text-[18px] leading-[24px]  sm:h-auto xl:text-[20px] xl:leading-[28px]">
                     Tin Can Beverage Size
                   </span>
                   {tinCanSize.map((size, index) => (
@@ -394,8 +394,8 @@ export default function OurProductSection({ catalog }) {
                   ))}
                 </div>
                 <div className="h-full w-[1px] bg-[#B5B9AD] " />{' '}
-                <div className="flex flex-col gap-3 text-start flex-1">
-                  <span className="text-[#475131] font-bold text-[18px] leading-[24px] h-[48px] sm:h-auto xl:text-[20px] xl:leading-[28px]">
+                <div className="flex flex-col gap-3 text-start flex-grow-[2]">
+                  <span className="text-[#475131] font-bold text-[18px] leading-[24px]  sm:h-auto xl:text-[20px] xl:leading-[28px]">
                     Units Per Cartons
                   </span>
                   {unitPerCartons.map((size, index) => (
