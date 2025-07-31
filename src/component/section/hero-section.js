@@ -29,7 +29,7 @@ export default function HeroSection() {
         ))}
       </Slide>
       {/* mobile text */}
-      <div className="absolute left-0 p-6 top-[116px] flex justify-center w-full xl:hidden poppins">
+      <div className="absolute left-0 p-6 top-[116px] z-[4] flex justify-center w-full xl:hidden poppins">
         <div className="max-w-3xl w-full flex flex-col gap-4">
           <span className="text-[28px] font-semibold text-[#B2CA7A] leading-10 ">
             Taste of nature
@@ -47,7 +47,7 @@ export default function HeroSection() {
         </div>
       </div>
       {/* desktop text */}
-      <div className="absolute left-0 px-[96px] bottom-[96px] justify-center w-full hidden xl:flex poppins">
+      <div className="absolute left-0 px-[96px] bottom-[96px] z-[4] justify-center w-full hidden xl:flex poppins">
         <div className="max-w-1088 w-full flex flex-col gap-4">
           <span className="text-[40px] font-semibold text-[#B2CA7A] leading-[52px] ">
             Taste of nature
